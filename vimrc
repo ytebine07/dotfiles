@@ -82,8 +82,8 @@ au InsertEnter * hi Statusline
 " 色やカラースキーマの設定
 "--------------------------------------------
 set t_Co=256                "256色設定
-:colorscheme molokai
-":colorscheme darkblue
+":colorscheme molokai
+:colorscheme darkblue
 ":colorscheme zenburn
 
 
@@ -95,9 +95,9 @@ filetype off
 
 if has('vim_starting')
     "neobundleの場所
-    set runtimepath+=~/.vim/bundle/neobundle/
+    set runtimepath+=~/dotfiles/vim/neobundle.vim
     "プラグインの展開場所 
-    call neobundle#rc(expand('~/.vim/bundle/'))
+    call neobundle#rc(expand('~/dotfiles/vim/neobundledPkgs/'))
 endif
 
 "強力補完機能
@@ -107,15 +107,15 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neocomplcache-snippets-complete' 
 
 "Vimの中でShellを起動する
-NeoBundle 'Shougo/vimshell'
+"NeoBundle 'Shougo/vimshell'
 
 " vim-scripts リポジトリ (1)
  
 " github の任意のリポジトリ (2)
-NeoBundle "tpope/vim-fugitive"
+"NeoBundle "tpope/vim-fugitive"
  
 " github 以外のリポジトリ (3)
-NeoBundle "git://git.wincent.com/command-t.git"
+"NeoBundle "git://git.wincent.com/command-t.git"
  
 filetype plugin indent on
 
