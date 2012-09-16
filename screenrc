@@ -1,28 +1,44 @@
+#############################
+#   共通設定
+#############################
 escape			    ^F^F        #
 startup_message		off         #起動時のメッセージoff
 autodetach		    on
 defencoding		    utf-8	    #デフォルト文字コード
-vbell			    off
+vbell			    off         #うざいベルを鳴らさない
 defscrollback		5000        #ヒストリ
 
+#screen起動時に、ウィンドウサイズを変えない
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+
+#############################
+#   表示系設定
+#############################
 #常に出ている情報設定
-#hardstatus alwayslastline	"`[%2c] %`%-w%{=b bw} %n %t%{-}%+w"
+hardstatus alwayslastline	"`[%2c] %`%-w%{=b bw} %n %t%{-}%+w"
 hardstatus alwayslastline	"[%2c] %`%-w%{=b bw} %n %t%{-}%+w"
 
 #ウィンドウごとに出る情報設定
 caption always "%{= wk} %-w%{=bu dr}%n %t%{-}%+w %= %{=b wb}%y/%m/%d(%D) %{=b wb}%c"
 caption always "%{= wk} %-w%{=bu dr}%n %t%{-}%+w %="
 
-#screen起動時に、ウィンドウサイズを変えない
-termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
-
-
-# ショートカット
+#############################
+#   ショートカット設定
+#############################
 bind h prev
 bind k next
 bind u only
 bind p split
 bind j focus
 
-# うざいベルを消す
-vbell off 
+#############################
+#   分割されたウィンドウの大きさを変える
+#   Ctrl+key で1行ずつ変わる
+#############################
+#横方向
+bindkey ^l  resize -h +1
+bindkey ^h  resize -h -1
+#縦方向
+bindkey ^j  resize -v +1
+bindkey ^k  resize -v -1
