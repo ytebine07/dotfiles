@@ -34,11 +34,14 @@ bind j focus
 
 #############################
 #   分割されたウィンドウの大きさを変える
-#   Ctrl+key で1行ずつ変わる
+#   Ctrl+rで、ウィンドウの大きさ変えるモードに変更し、
+#   いつものjklhで大きさが変えられます。
 #############################
-#横方向
-bindkey ^l  resize -h +1
-bindkey ^h  resize -h -1
-#縦方向
-bindkey ^j  resize -v +1
-bindkey ^k  resize -v -1
+bind r eval 'echo "Resize window"' 'command -c resize'
+bind -c resize ^]  command
+bind -c resize j eval 'resize -v +1' 'command -c resize'
+bind -c resize k eval 'resize -v -1' 'command -c resize'
+bind -c resize l eval 'resize -h +1' 'command -c resize'
+bind -c resize h eval 'resize -h -1' 'command -c resize'
+
+
