@@ -106,6 +106,13 @@ NeoBundle 'Shougo/neocomplcache'
 "neocomplcacheのスニペットを使う
 NeoBundle 'Shougo/neocomplcache-snippets-complete' 
 
+"unite
+NeoBundle 'Shougo/unite.vim'
+
+"srround
+NeoBundle 'taichouchou2/surround.vim'
+
+
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
 
