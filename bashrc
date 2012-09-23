@@ -16,3 +16,6 @@ alias la='ls -la'
 alias ltr='ls -ltr'
 alias vi='vim'
 alias sr='screen'
+
+#set env for git
+export GIT_EDITOR=vim
