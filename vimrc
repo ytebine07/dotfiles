@@ -21,6 +21,9 @@
 :se	tabstop=4
 "ts=タブの幅 sw=自動インデント時のタブの幅
 
+"ステータスラインの表示設定
+set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
+
 "--------------------------------------------
 " 便利なマップ関係
 "--------------------------------------------
@@ -152,4 +155,8 @@ inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
 "スニペットの設定
 "<C-k>で、上に移動とスニペット補完両方やりたい。
 imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : "\<Up>"
+
+
+
+
 
