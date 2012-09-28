@@ -43,6 +43,11 @@ inoremap ;;     <END>
 "InsertLeaveが検知できないのでマップ。
 inoremap <C-c> <C-ESC>     
 
+
+"Ctrl+uで、直前の一文字削除
+inoremap <C-u>  <BS>
+map      <C-u>  i<BS><C-ESC>
+
 "vimrc再読み込み
 map <Space>r :source ~/.vimrc
 
