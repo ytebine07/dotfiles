@@ -13,6 +13,8 @@
 :se	ruler                   "カーソルの位置を表示する
 :se	fdm=marker              "折り畳む種類
 :se tw=0                    "行が長くなっても、勝手に折り返さない
+:se cursorline              "今いる行を目立たせる
+
 
 "Vimのメッセージのハイライト表示の指定
 :se	expandtab
