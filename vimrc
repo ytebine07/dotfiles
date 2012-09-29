@@ -24,6 +24,14 @@
 "ステータスラインの表示設定
 set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
 
+" 挿入モード終了時に IME 状態を保存しない
+inoremap <silent> <Esc> <Esc>
+inoremap <silent> <C-[> <Esc>
+
+" 「日本語入力固定モード」切り替えキー
+inoremap <silent> <C-j> <C-^>
+
+
 "--------------------------------------------
 " 便利なマップ関係
 "--------------------------------------------
@@ -155,8 +163,3 @@ inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
 "スニペットの設定
 "<C-k>で、上に移動とスニペット補完両方やりたい。
 imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : "\<Up>"
-
-
-
-
-
