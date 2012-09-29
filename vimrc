@@ -24,6 +24,11 @@
 "ステータスラインの表示設定
 set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
 
+"スペースや改行など見えない文字を見えるようにする。
+set list
+set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
+
+
 " 挿入モード終了時に IME 状態を保存しない
 inoremap <silent> <Esc> <Esc>
 inoremap <silent> <C-[> <Esc>
