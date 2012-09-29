@@ -52,8 +52,7 @@ inoremap ;;     <END>
 
 "コマンドモードへ戻るとき<C-c>では
 "InsertLeaveが検知できないのでマップ。
-inoremap <C-c> <C-ESC>     
-
+inoremap <C-c> <C-ESC>
 
 "Ctrl+uで、直前の一文字削除
 inoremap <C-u>  <BS>
