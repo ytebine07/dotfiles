@@ -14,11 +14,15 @@ endif
 "強力補完機能
 NeoBundle 'Shougo/neocomplcache'
 "neocomplcacheのスニペットを使う
-NeoBundle 'Shougo/neocomplcache-snippets-complete' 
+NeoBundle 'Shougo/neocomplcache-snippets-complete'
 "unite
 NeoBundle 'Shougo/unite.vim'
 "srround
 NeoBundle 'taichouchou2/surround.vim'
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
+
+"カラースキーマ
+NeoBundle 'tomasr/molokai.git'
+NeoBundle 'jnurmine/Zenburn.git'
 filetype plugin indent on
