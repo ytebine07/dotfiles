@@ -19,6 +19,11 @@ NeoBundle 'Shougo/neocomplcache-snippets-complete'
 NeoBundle 'Shougo/unite.vim'
 "srround
 NeoBundle 'taichouchou2/surround.vim'
+"コードを書いたらすぐ実行
+NeoBundle 'thinca/vim-quickrun.git'
+"コード整形用
+NeoBundle 'h1mesuke/vim-alignta.git'
+
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
 
