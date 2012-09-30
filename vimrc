@@ -19,6 +19,11 @@ source  ~/dotfiles/vim/vimrc.color
 source  ~/dotfiles/vim/vimrc.base
 
 "--------------------------------------------
+"   カーソル行の設定
+"--------------------------------------------
+source  ~/dotfiles/vim/vimrc.cursorline
+
+"--------------------------------------------
 "   ステータスラインの表示設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.statusline
@@ -33,3 +38,6 @@ source  ~/dotfiles/vim/vimrc.keymap
 " neocomplchacheの設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.neocomplcache
+
+
+
