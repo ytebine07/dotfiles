@@ -1,27 +1,29 @@
-
-:se	number                  "行数表示
-:se	si                      "新しく行を作ったとき、自動インデントを行う
-:se	makeprg=gmake           "makeを行うプログラムの選択
-:se	makeef=./vim##.err      "makeのエラーや、grep検索結果を出力するファイル名
-:se	matchtime=15            "maechparisで表示する時間
-:se	hlsearch                "検索結果をハイライト表示する
-:se	title                   "windowにファイル名表示
-:syntax	on                  "色付け表示 on
-:filetype	on              "開いているファイルのタイプ
-:se	sm                      "閉じカッコが入力されたとき、対応カッコをハイライト
-:se	wildmenu                "補完候補を表示する
-:se	backspace=2             "バックスペースの動作を決める
-:se	ruler                   "カーソルの位置を表示する
-:se	fdm=marker              "折り畳む種類
-:se tw=0                    "行が長くなっても、勝手に折り返さない
-:se cursorline              "今いる行を目立たせる
+"--------------------------------------------
+"   ステータスラインの表示設定
+"--------------------------------------------
+:syntax     on              "色付け表示 on
+:filetype   on              "開いているファイルのタイプ
+set number                  "行数表示
+set si                      "新しく行を作ったとき、自動インデントを行う
+set makeprg=gmake           "makeを行うプログラムの選択
+set makeef=./vim##.err      "makeのエラーや、grep検索結果を出力するファイル名
+set matchtime=15            "maechparisで表示する時間
+set hlsearch                "検索結果をハイライト表示する
+set title                   "windowにファイル名表示
+set sm                      "閉じカッコが入力されたとき、対応カッコをハイライト
+set wildmenu                "補完候補を表示する
+set backspace=2             "バックスペースの動作を決める
+set ruler                   "カーソルの位置を表示する
+set fdm=marker              "折り畳む種類
+set tw=0                    "行が長くなっても、勝手に折り返さない
+set cursorline              "今いる行を目立たせる
 
 
 "Vimのメッセージのハイライト表示の指定
-:se	expandtab
-:se	shiftwidth=4
-:se	softtabstop=4
-:se	tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
+set tabstop=4
 "ts=タブの幅 sw=自動インデント時のタブの幅
 
 "スペースや改行など見えない文字を見えるようにする。
