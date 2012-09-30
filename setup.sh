@@ -19,4 +19,4 @@ done
 ##############################################
 # 2.neobundle.vimを入れる
 ##############################################
-git clone https://github.com/Shougo/neobundle.vim ~/dotfiles/vim/neobundle.vim
+git clone https://github.com/Shougo/neobundle.vim ~/dotfiles/vim/plugins/neobundle.vim

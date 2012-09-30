@@ -1,0 +1,7 @@
+"--------------------------------------------
+" 色やカラースキーマの設定
+"--------------------------------------------
+set t_Co=256                "256色設定
+:colorscheme darkblue
+":colorscheme molokai
+":colorscheme zenburn

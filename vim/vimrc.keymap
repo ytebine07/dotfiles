@@ -1,0 +1,36 @@
+"--------------------------------------------
+" 便利なマップ関係
+"--------------------------------------------
+"()系のマップ
+inoremap {{ {}<LEFT>
+inoremap (( (  )<LEFT><LEFT>
+inoremap [[ []<LEFT>
+inoremap "" ""<LEFT>
+inoremap '' ''<LEFT>
+inoremap << <><LEFT>
+
+"移動系のマップ
+inoremap <C-h>  <LEFT>
+inoremap <C-k>  <UP>
+inoremap <C-l>  <RIGHT>
+inoremap <C-j>  <DOWN>
+inoremap ;;     <END>
+
+"コマンドモードへ戻るとき<C-c>では
+"InsertLeaveが検知できないのでマップ。
+inoremap <C-c> <C-ESC>
+
+"Ctrl+uで、直前の一文字削除
+inoremap <C-u>  <BS>
+map      <C-u>  i<BS><C-ESC>
+
+"vimrc再読み込み
+map <Space>r :source ~/.vimrc
+
+
+" 挿入モード終了時に IME 状態を保存しない
+inoremap <silent> <Esc> <Esc>
+inoremap <silent> <C-[> <Esc>
+
+" 「日本語入力固定モード」切り替えキー
+inoremap <silent> <C-j> <C-^>
