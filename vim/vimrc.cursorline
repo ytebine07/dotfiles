@@ -1,0 +1,12 @@
+"--------------------------------------------
+"   カーソル行の設定
+"--------------------------------------------
+
+"カーソルが存在する行を目立たせる設定
+"カーソル自体の色は、ターミナルソフトで制御か？
+set cursorline
+
+"存在行の下にラインを引く設定
+"hi CursorLine   term=reverse cterm=bold,underline
+"存在行を１行目立たせる設定
+hi CursorLine   term=reverse cterm=none ctermbg=darkblue
