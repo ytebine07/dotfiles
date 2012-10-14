@@ -23,6 +23,11 @@ NeoBundle 'taichouchou2/surround.vim'
 NeoBundle 'thinca/vim-quickrun.git'
 "コード整形用
 NeoBundle 'h1mesuke/vim-alignta.git'
+"コメントアウトを簡単に
+NeoBundle 'scrooloose/nerdcommenter.git'
+"Bufferをタブみたいに表示する
+NeoBundle 'vim-scripts/minibufexpl.vim.git'
+
 
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
