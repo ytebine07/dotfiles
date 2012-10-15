@@ -27,7 +27,8 @@ NeoBundle 'h1mesuke/vim-alignta.git'
 NeoBundle 'scrooloose/nerdcommenter.git'
 "Bufferをタブみたいに表示する
 NeoBundle 'vim-scripts/minibufexpl.vim.git'
-
+"htmlを高速で書く
+NeoBundle 'mattn/zencoding-vim.git'
 
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
