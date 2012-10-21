@@ -16,6 +16,9 @@ inoremap <C-l>  <RIGHT>
 inoremap <C-j>  <DOWN>
 inoremap ;;     <END>
 
+"末尾にセミコロンをうつ
+inoremap <SPACE>; <END>;
+
 "コマンドモードへ戻るとき<C-c>では
 "InsertLeaveが検知できないのでマップ。
 inoremap <C-c> <C-ESC>
