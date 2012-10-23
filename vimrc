@@ -29,6 +29,11 @@ source  ~/dotfiles/vim/vimrc.cursorline
 source  ~/dotfiles/vim/vimrc.statusline
 
 "--------------------------------------------
+"   Unite.vim系の設定 
+"--------------------------------------------
+source  ~/dotfiles/vim/vimrc.unite
+
+"--------------------------------------------
 " 便利なマップ関係
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.keymap
