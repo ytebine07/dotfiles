@@ -29,6 +29,9 @@ NeoBundle 'scrooloose/nerdcommenter.git'
 NeoBundle 'vim-scripts/minibufexpl.vim.git'
 "htmlを高速で書く
 NeoBundle 'mattn/zencoding-vim.git'
+"statuslineを強化
+NeoBundle  'Lokaltog/vim-powerline.git'
+
 
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
