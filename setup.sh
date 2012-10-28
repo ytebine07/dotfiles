@@ -6,7 +6,8 @@
 ##############################################
 DOT_FILES=( .vimrc 
             .bashrc
-            .screenrc )
+            .screenrc
+            .tmux.conf  )
 
 for FILE in ${DOT_FILES[@]}
 do

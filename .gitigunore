@@ -1,3 +1,4 @@
 #gitigunoreファイル
 vim/plugins/*
 .DS_Store
+*swp
