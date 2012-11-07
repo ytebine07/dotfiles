@@ -3,11 +3,12 @@
 "--------------------------------------------
 "()系のマップ
 inoremap {{ {}<LEFT>
-inoremap (( (  )<LEFT><LEFT>
+inoremap (( ()<LEFT><LEFT>
 inoremap [[ []<LEFT>
 inoremap "" ""<LEFT>
 inoremap '' ''<LEFT>
 inoremap << <><LEFT>
+inoremap ?? ??<LEFT>
 
 "移動系のマップ
 inoremap <C-h>  <LEFT>
