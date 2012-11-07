@@ -16,6 +16,7 @@ PS1=$PS1"[\t]\$ "
 alias ll='ls -l'
 alias la='ls -la'
 alias ltr='ls -ltr'
+alias ltrtail='ls -ltr|tail'
 alias vi='vim'
 alias sr='screen'
 
