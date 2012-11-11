@@ -20,13 +20,11 @@ set tw=0                    "行が長くなっても、勝手に折り返さな
 
 
 
-
 "Vimのメッセージのハイライト表示の指定
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-"ts=タブの幅 sw=自動インデント時のタブの幅
+"set expandtab               "設定するとインデントがスペースになる
+set softtabstop=4           "タブを入力したときにずれる幅(スペース換算)
+set tabstop=4               "1タブの表示幅
+"set shiftwidth=8
 
 "スペースや改行など見えない文字を見えるようにする。
 set list
