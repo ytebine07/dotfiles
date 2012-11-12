@@ -13,8 +13,8 @@ endif
 
 "強力補完機能
 NeoBundle 'Shougo/neocomplcache'
-"neocomplcacheのスニペットを使う
-NeoBundle 'Shougo/neocomplcache-snippets-complete'
+"snipeet
+NeoBundle 'Shougo/neosnippet'
 "unite
 NeoBundle 'Shougo/unite.vim'
 "srround
