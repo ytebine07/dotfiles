@@ -13,4 +13,7 @@ local CYAN="%{${fg[cyan]}%}"
 local PINK=$'%{\e[1;35m%}'
 local END_COLOR="%{${reset_color}%}"
 
-PROMPT="${GREEN}<%n@%m> %(!.#.$) ${END_COLOR}"
+PROMPT="${GREEN}<%n> ${END_COLOR}${PINK}[%~]${END_COLOR}
+"
+PROMPT=$PROMPT"[%*]$ "
+
