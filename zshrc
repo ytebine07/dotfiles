@@ -17,12 +17,6 @@ zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
 setopt PROMPT_SUBST
 source ~/dotfiles/git-completion.bash
 source ~/dotfiles/git-prompt.sh
-PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
-
-
-
-
-
 
 #--------------------------
 # プロンプト
@@ -36,7 +30,7 @@ local GREEN="%{${fg[green]}%}"
 local CYAN="%{${fg[cyan]}%}"
 local PINK=$'%{\e[1;35m%}'
 local END_COLOR="%{${reset_color}%}"
-local BRANCH='$(__git_ps1 "[ %s\]")'
+local BRANCH='$(__git_ps1 "[%s]")'
 
 
 PROMPT="${GREEN}<%n> ${END_COLOR}${PINK}[%~]${END_COLOR}
