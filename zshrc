@@ -46,6 +46,13 @@ alias sr='screen'
 alias g='git'
 
 #--------------------------
+# キーバインド変更
+#--------------------------
+bindkey "^h" backward-char
+bindkey "^l" forward-char
+bindkey "^u" backward-delete-char
+
+#--------------------------
 # setting for git
 #--------------------------
 export GIT_EDITOR=vim
