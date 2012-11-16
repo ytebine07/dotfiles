@@ -1,5 +1,4 @@
-#zsh setting
-
+#/bin/zsh
 #--------------------------
 # 基本設定
 #--------------------------
@@ -7,6 +6,15 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 setopt hist_ignore_dups     #重複した履歴を保存しない
 setopt auto_cd              #ディレクトリ名だけで移動
+
+#--------------------------
+# gitのブランチ名補完設定
+#--------------------------
+autoload -U compinit; compinit
+zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
+                             /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
+                             /usr/local/git/bin
+source ~/dotfiles/git-completion.bash
 
 #--------------------------
 # プロンプト
@@ -25,9 +33,6 @@ PROMPT="${GREEN}<%n> ${END_COLOR}${PINK}[%~]${END_COLOR}
 "
 PROMPT=$PROMPT"[%*]$ "
 
-
-
-
 #--------------------------
 # command
 #--------------------------
@@ -38,8 +43,9 @@ alias ltrtail='ls -ltr|tail'
 alias ltail='ls -ltr|tail'
 alias vi='vim'
 alias sr='screen'
+alias g='git'
 
 #--------------------------
-# set env for git
+# setting for git
 #--------------------------
 export GIT_EDITOR=vim

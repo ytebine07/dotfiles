@@ -22,3 +22,8 @@ done
 # 2.neobundle.vimを入れる
 ##############################################
 git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/plugins/neobundle.vim
+
+##############################################
+# 3.git-completion.bashを入れる
+##############################################
+curl https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash

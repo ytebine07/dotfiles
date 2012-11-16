@@ -2,3 +2,4 @@
 vim/plugins/*
 .DS_Store
 *swp
+git-completion.bash
