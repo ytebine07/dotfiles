@@ -8,13 +8,21 @@ setopt hist_ignore_dups     #重複した履歴を保存しない
 setopt auto_cd              #ディレクトリ名だけで移動
 
 #--------------------------
-# gitのブランチ名補完設定
+# gitのブランチ名補完,表示設定
 #--------------------------
 autoload -U compinit; compinit
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                              /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
                              /usr/local/git/bin
+setopt PROMPT_SUBST
 source ~/dotfiles/git-completion.bash
+source ~/dotfiles/git-prompt.sh
+PS1='[%n@%m %c$(__git_ps1 " (%s)")]\$ '
+
+
+
+
+
 
 #--------------------------
 # プロンプト
@@ -28,10 +36,13 @@ local GREEN="%{${fg[green]}%}"
 local CYAN="%{${fg[cyan]}%}"
 local PINK=$'%{\e[1;35m%}'
 local END_COLOR="%{${reset_color}%}"
+local BRANCH='$(__git_ps1 "[ %s\]")'
+
 
 PROMPT="${GREEN}<%n> ${END_COLOR}${PINK}[%~]${END_COLOR}
 "
 PROMPT=$PROMPT"[%*]$ "
+RPROMPT=${BRANCH}
 
 #--------------------------
 # command
