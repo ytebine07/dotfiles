@@ -16,6 +16,8 @@ set backspace=2             "バックスペースの動作を決める
 set ruler                   "カーソルの位置を表示する
 set fdm=marker              "折り畳む種類
 set tw=0                    "行が長くなっても、勝手に折り返さない
+set visualbell              "ビープ音ならさない(けど画面フラッシュはする)
+set vb t_vb=                "画面フラッシュをやめる
 
 
 

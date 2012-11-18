@@ -6,7 +6,7 @@ HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 setopt hist_ignore_dups     #重複した履歴を保存しない
 setopt auto_cd              #ディレクトリ名だけで移動
-
+setopt nolistbeep           #ビープ音をならさない
 #--------------------------
 # gitのブランチ名補完,表示設定
 #--------------------------
