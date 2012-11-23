@@ -33,7 +33,7 @@ local END_COLOR="%{${reset_color}%}"
 local BRANCH='$(__git_ps1 "[%s]")'
 
 
-PROMPT="${GREEN}<%n> ${END_COLOR}${PINK}[%~]${END_COLOR}
+PROMPT="${GREEN}<%U%m%u@%n> ${END_COLOR}${PINK}[%~]${END_COLOR}
 "
 PROMPT=$PROMPT"[%*]$ "
 RPROMPT=${BRANCH}
