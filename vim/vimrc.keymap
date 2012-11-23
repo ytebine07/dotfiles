@@ -17,6 +17,12 @@ inoremap <C-l>  <RIGHT>
 inoremap <C-j>  <DOWN>
 inoremap ;;     <END>
 
+"分割されたとき、大きさを簡単に変える
+map      -      <C-W>+
+map      =      <C-w><
+map      ^      <C-W>-
+map      ~      <C-w>>
+
 "末尾にセミコロンをうつ
 inoremap <SPACE>; <END>;
 
