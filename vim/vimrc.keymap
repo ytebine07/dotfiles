@@ -1,7 +1,14 @@
 "--------------------------------------------
 " 便利なマップ関係
 "--------------------------------------------
-"()系のマップ
+let mapleader = ";"
+
+"EasyMotion用設定{{{
+let g:EasyMotion_leader_key=';;'
+let g:EasyMotion_keys='ik;onhu'
+"}}}
+
+"()系のマップ{{{
 inoremap {{ {}<LEFT>
 inoremap (( ()<LEFT>
 inoremap [[ []<LEFT>
@@ -9,19 +16,22 @@ inoremap "" ""<LEFT>
 inoremap '' ''<LEFT>
 inoremap << <><LEFT>
 inoremap ?? ??<LEFT>
+"}}}
 
-"移動系のマップ
+"インサートモード時の移動系のマップ{{{
 inoremap <C-h>  <LEFT>
 inoremap <C-k>  <UP>
 inoremap <C-l>  <RIGHT>
 inoremap <C-j>  <DOWN>
 inoremap ;;     <END>
+"}}}
 
-"分割されたとき、大きさを簡単に変える
+"分割されたとき、大きさを簡単に変える {{{
 map      -      <C-W>+
 map      =      <C-w><
 map      ^      <C-W>-
 map      ~      <C-w>>
+"}}}
 
 "末尾にセミコロンをうつ
 inoremap <SPACE>; <END>;

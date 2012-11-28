@@ -38,11 +38,7 @@ source  ~/dotfiles/vim/vimrc.unite
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.keymap
 
-
 "--------------------------------------------
 " neocomplchacheの設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.neocomplcache
-
-
-
