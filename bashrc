@@ -19,6 +19,7 @@ alias ltr='ls -ltr'
 alias ltrtail='ls -ltr|tail'
 alias vi='vim'
 alias sr='screen'
+alias z='zsh'
 
 #bind
 #http://kazmax.zpp.jp/cmd/b/bash.1.html
