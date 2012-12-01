@@ -7,6 +7,12 @@ HISTSIZE=10000
 setopt hist_ignore_dups     #重複した履歴を保存しない
 setopt auto_cd              #ディレクトリ名だけで移動
 setopt nolistbeep           #ビープ音をならさない
+
+#--------------------------
+# 自作関数ファイル読み込み
+#--------------------------
+source ~/dotfiles/zsh/*
+
 #--------------------------
 # gitのブランチ名補完,表示設定
 #--------------------------
@@ -48,6 +54,7 @@ alias ltrtail='ls -ltr|tail'
 alias ltail='ls -ltr|tail'
 alias vi='vim'
 alias sr='screen'
+alias tm='tmux'
 alias g='git'
 
 #--------------------------
