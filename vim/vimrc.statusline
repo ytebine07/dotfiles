@@ -8,32 +8,35 @@ set laststatus=2
 set statusline=%<%f\ %m\ %r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=\ (%v,%l)/%L%8P\ 
 
 
+"モード別にステータスラインの色を変えるプラグインを導入したので
+"以下の設定は不要になりました。
+"
 "インサートモード、コマンドモードで
 "ステータスラインの色を変更する設定
 
-"vim起動時のステータスラインの色
-hi Statusline 
-            \    guifg=Yellow
-            \    guibg=DarkGray
-            \    gui=none
-            \    ctermfg=Yellow
-            \    ctermbg=DarkGray
-            \    cterm=none
-
-"コマンドモードの時のステータスライン色
-au InsertLeave * hi Statusline 
-            \    guifg=Yellow
-            \    guibg=DarkGray
-            \    gui=none
-            \    ctermfg=Yellow
-            \    ctermbg=DarkGray
-            \    cterm=none
-
-"インサートモードの時のステータスライン色
-au InsertEnter * hi Statusline 
-            \   guifg=DarkBlue
-            \   guibg=DarkYellow
-            \   gui=none
-            \   ctermfg=Blue
-            \   ctermbg=Yellow
-            \   cterm=none
+""vim起動時のステータスラインの色
+"hi Statusline 
+"            \    guifg=Yellow
+"            \    guibg=DarkGray
+"            \    gui=none
+"            \    ctermfg=Yellow
+"            \    ctermbg=DarkGray
+"            \    cterm=none
+"
+""コマンドモードの時のステータスライン色
+"au InsertLeave * hi Statusline 
+"            \    guifg=Yellow
+"            \    guibg=DarkGray
+"            \    gui=none
+"            \    ctermfg=Yellow
+"            \    ctermbg=DarkGray
+"            \    cterm=none
+"
+""インサートモードの時のステータスライン色
+"au InsertEnter * hi Statusline 
+"            \   guifg=DarkBlue
+"            \   guibg=DarkYellow
+"            \   gui=none
+"            \   ctermfg=Blue
+"            \   ctermbg=Yellow
+"            \   cterm=none

@@ -56,6 +56,7 @@ alias vi='vim'
 alias sr='screen'
 alias tm='tmux'
 alias g='git'
+alias mkdir='mkch'
 
 #--------------------------
 # キーバインド変更
