@@ -4,8 +4,12 @@
 let mapleader = ";"
 
 "EasyMotion用設定{{{
-let g:EasyMotion_leader_key=';;'
+let g:EasyMotion_leader_key='<Leader>'
 let g:EasyMotion_keys='ik;onhu'
+"}}}
+"miniBufExpl用設定{{{
+nmap <C-p> :MBEbn<CR>
+nmap <C-n> :MBEbp<CR>
 "}}}
 
 "()系のマップ{{{
@@ -27,10 +31,10 @@ inoremap ;;     <END>
 "}}}
 
 "分割されたとき、大きさを簡単に変える {{{
-map      -      <C-W>+
-map      =      <C-w><
-map      ^      <C-W>-
-map      ~      <C-w>>
+noremap     8       <C-W>+
+nnoremap    9       <C-W>-
+noremap     (       <C-W><
+nnoremap    )       <C-W>>
 "}}}
 
 "末尾にセミコロンをうつ
@@ -45,8 +49,7 @@ inoremap <C-u>  <BS>
 map      <C-u>  i<BS><C-ESC>
 
 "vimrc再読み込み
-map <Space>r :source ~/.vimrc
-
+map <Space>r :source ~/.vimrc<CR>
 
 " 挿入モード終了時に IME 状態を保存しない
 inoremap <silent> <Esc> <Esc>

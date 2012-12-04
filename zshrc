@@ -57,6 +57,9 @@ alias sr='screen'
 alias tm='tmux'
 alias g='git'
 alias mkdir='mkch'
+alias z='zsh'
+alias hist='history'
+alias hs='history'
 
 #--------------------------
 # キーバインド変更
