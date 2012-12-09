@@ -17,6 +17,8 @@ NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neosnippet'
 "unite
 NeoBundle 'Shougo/unite.vim'
+
+NeoBundle 'ujihisa/unite-colorscheme'
 "srround
 NeoBundle 'taichouchou2/surround.vim'
 "コードを書いたらすぐ実行

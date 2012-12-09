@@ -7,10 +7,6 @@ let mapleader = ";"
 let g:EasyMotion_leader_key='<Leader>'
 let g:EasyMotion_keys='ik;onhu'
 "}}}
-"miniBufExpl用設定{{{
-nmap <C-p> :MBEbn<CR>
-nmap <C-n> :MBEbp<CR>
-"}}}
 
 "()系のマップ{{{
 inoremap {{ {}<LEFT>
@@ -36,6 +32,9 @@ nnoremap    9       <C-W>-
 noremap     (       <C-W><
 nnoremap    )       <C-W>>
 "}}}
+
+"バッファー系
+map     <C-d>   <C-ESC>:bd<CR>
 
 "末尾にセミコロンをうつ
 inoremap <SPACE>; <END>;
