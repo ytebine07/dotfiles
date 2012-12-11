@@ -27,3 +27,11 @@ endfunction
 "{{{ 作成した関数を、コマンドにマッピング。
 command! -complete=customlist,CompletionColorSchemes -nargs=1 Colorscheme call ReadCS(<f-args>)
 "}}}
+
+"--------------------------------------------
+" 色の独自設定
+"--------------------------------------------
+" visualモードで選択された箇所の色付け
+hi clear Visual
+hi Visual ctermbg=81 guibg=#005f00 term=reverse
+hi Visual ctermbg=29 guibg=#005f00 term=reverse

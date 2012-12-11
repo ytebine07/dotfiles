@@ -34,4 +34,4 @@ set tabstop=4               "1タブの表示幅
 
 "スペースや改行など見えない文字を見えるようにする。
 set list
-set listchars=tab:»-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
+set listchars=tab:>-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
