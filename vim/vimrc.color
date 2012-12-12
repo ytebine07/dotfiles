@@ -21,7 +21,7 @@ endif
 "{{{ ↑の関数用の補完関数。
 function! CompletionColorSchemes(ArgLead, CmdLine, CusorPos)
     let l:filter_cmd = printf('v:val =~ "^%s"', a:ArgLead)
-    return filter(['molokai','zenburn','darkblue'],l:filter_cmd)
+    return filter(['molokai','zenburn','xoria256','darkblue'],l:filter_cmd)
 endfunction
 "}}}
 "{{{ 作成した関数を、コマンドにマッピング。

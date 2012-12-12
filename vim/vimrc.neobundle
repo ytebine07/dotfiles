@@ -46,4 +46,5 @@ NeoBundle 'Lokaltog/vim-easymotion'
 "カラースキーマ
 NeoBundle 'tomasr/molokai.git'
 NeoBundle 'jnurmine/Zenburn.git'
+NeoBundle 'vim-scripts/xoria256.vim.git'
 filetype plugin indent on
