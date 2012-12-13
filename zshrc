@@ -61,6 +61,13 @@ alias z='zsh'
 alias hist='history'
 alias hs='history'
 
+CTAGSPATH="$HOME/dotfiles/bins/ctags-5.8j2/bin/ctags"
+ls $CTAGSPATH > /dev/null 2>&1
+if [ $? = 0 ]; then
+    alias ctags="$CTAGSPATH"
+fi
+
+
 #--------------------------
 # キーバインド変更
 #--------------------------
