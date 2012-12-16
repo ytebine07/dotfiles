@@ -58,8 +58,15 @@ alias tm='tmux'
 alias g='git'
 alias mkdir='mkch'
 alias z='zsh'
-alias hist='history'
-alias hs='history'
+alias hist='history 1'
+alias hs='history 1'
+
+CTAGSPATH="$HOME/dotfiles/bins/ctags-5.8j2/bin/ctags"
+ls $CTAGSPATH > /dev/null 2>&1
+if [ $? = 0 ]; then
+    alias ctags="$CTAGSPATH"
+fi
+
 
 #--------------------------
 # キーバインド変更

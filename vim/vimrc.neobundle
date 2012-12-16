@@ -33,12 +33,15 @@ NeoBundle 'vim-scripts/minibufexpl.vim.git'
 NeoBundle 'mattn/zencoding-vim.git'
 "statuslineを強化
 NeoBundle  'Lokaltog/vim-powerline.git'
-"ctags解析補助
-NeoBundle 'vim-scripts/trinity.vim.git'
 "カーソル移動をもっと便利に
 NeoBundle 'Lokaltog/vim-easymotion'
+"ctags解析補助
+NeoBundle 'vim-scripts/Trinity.git'
+NeoBundle 'vim-scripts/ctags.vim.git'
+NeoBundle 'vim-scripts/taglist.vim.git'
+NeoBundle 'wesleyche/SrcExpl.git'
 
-'
+
 
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
