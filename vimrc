@@ -47,3 +47,8 @@ source  ~/dotfiles/vim/vimrc.neocomplcache
 " [plugin]minibufexplの設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.minibufexpl
+
+"--------------------------------------------
+" [plugin]trinity系プラグイン達の設定
+"--------------------------------------------
+source ~/dotfiles/vim/vimrc.trinity
