@@ -2,16 +2,20 @@
 #--------------------------
 # 基本設定
 #--------------------------
-HISTFILE="$HOME/.zsh_history"
-HISTSIZE=10000
+HISTFILE=${HOME}/.zsh_history
+HISTSIZE=5000
+SAVEHIST=5000
 setopt hist_ignore_dups     #重複した履歴を保存しない
 setopt auto_cd              #ディレクトリ名だけで移動
 setopt nolistbeep           #ビープ音をならさない
+setopt share_history        #複数端末での履歴共有
+setopt extended_history     #履歴に日付も入れる
 
 #--------------------------
 # 自作関数ファイル読み込み
 #--------------------------
-source ~/dotfiles/zsh/*
+source ~/dotfiles/zsh/hist.sh
+source ~/dotfiles/zsh/mkch.sh
 
 #--------------------------
 # gitのブランチ名補完,表示設定
@@ -57,16 +61,15 @@ alias sr='screen'
 alias tm='tmux'
 alias g='git'
 alias mkdir='mkch'
+alias mkdirp='mkdir'
 alias z='zsh'
 alias hist='history 1'
-alias hs='history 1'
 
 CTAGSPATH="$HOME/dotfiles/bins/ctags-5.8j2/bin/ctags"
 ls $CTAGSPATH > /dev/null 2>&1
 if [ $? = 0 ]; then
     alias ctags="$CTAGSPATH"
 fi
-
 
 #--------------------------
 # キーバインド変更
