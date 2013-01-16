@@ -4,6 +4,11 @@
 #わかりやすい形で出力する。
 function hs(){
     AWK=/usr/local/bin/awk
+    ls $AWK> /dev/null 2>&1
+    if [ $? = 1 ]; then
+        AWK=`which awk`
+    fi
+
     cat -n $HISTFILE | $AWK '{print  $1,
                              "",
                              strftime("%F %H:%M:%S", substr($3,1,10) ),
