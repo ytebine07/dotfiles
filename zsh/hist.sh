@@ -8,6 +8,6 @@ function hs(){
                              "",
                              strftime("%F %H:%M:%S", substr($3,1,10) ),
                              " ",
-                             substr($3,14,length($3))
+                             substr($0,23,length($0))
                             }'
 }
