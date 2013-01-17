@@ -14,7 +14,7 @@ setopt extended_history     #履歴に日付も入れる
 #--------------------------
 # 自作関数ファイル読み込み
 #--------------------------
-source ~/dotfiles/zsh/hist.sh
+source ~/dotfiles/zsh/hs.sh
 source ~/dotfiles/zsh/mkch.sh
 
 #--------------------------
