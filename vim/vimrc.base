@@ -8,7 +8,7 @@ endif
 
 :filetype   on              "開いているファイルのタイプ
 set number                  "行数表示
-set si                      "新しく行を作ったとき、自動インデントを行う
+"set si                      "新しく行を作ったとき、自動インデントを行う
 set makeprg=gmake           "makeを行うプログラムの選択
 set makeef=./vim##.err      "makeのエラーや、grep検索結果を出力するファイル名
 set matchtime=15            "maechparisで表示する時間
@@ -27,7 +27,7 @@ set tags=tags;              "tagsファイルを再起的に探してくれる
 
 
 "Vimのメッセージのハイライト表示の指定
-"set expandtab               "設定するとインデントがスペースになる
+set expandtab               "設定するとインデントがスペースになる
 set softtabstop=4           "タブを入力したときにずれる幅(スペース換算)
 set tabstop=4               "1タブの表示幅
 "set shiftwidth=8
