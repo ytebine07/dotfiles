@@ -18,15 +18,21 @@ source ~/dotfiles/zsh/hs.sh
 source ~/dotfiles/zsh/mkch.sh
 
 #--------------------------
-# gitのブランチ名補完,表示設定
+# gitのbranchをプロンプトに表示する設定
+#--------------------------
+setopt PROMPT_SUBST
+source ~/dotfiles/git-prompt.sh
+
+#--------------------------
+# gitのブランチ名補完設定
 #--------------------------
 autoload -U compinit; compinit
 zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
                              /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
                              /usr/local/git/bin
-setopt PROMPT_SUBST
-source ~/dotfiles/git-completion.bash
-source ~/dotfiles/git-prompt.sh
+autoload bashcompinit
+bashcompinit
+zstyle ':completion:*:*:git:*' script ~/dotfiles/git-completion.zsh
 
 #--------------------------
 # プロンプト
