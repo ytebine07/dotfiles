@@ -99,5 +99,5 @@ export GIT_EDITOR=vim
 #--------------------------
 HOST=`hostname|awk 'BEGIN{FS="."}{print $2}'`
 if [ $HOST = sakura ]; then
-    source ./zsh.sakura
+    source ./zshrc.sakura
 fi
