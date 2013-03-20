@@ -93,3 +93,11 @@ bindkey "^u" backward-delete-char
 # setting for git
 #--------------------------
 export GIT_EDITOR=vim
+
+#--------------------------
+# 環境別の設定を読み込む
+#--------------------------
+HOST=`hostname|awk 'BEGIN{FS="."}{print $2}'`
+if [ $HOST = sakura ]; then
+    source ./zshrc.sakura
+fi
