@@ -1,0 +1,11 @@
+#/bin/zsh
+#--------------------------
+#   sakuraサーバー用セッティング
+#--------------------------
+#文字コードをUTF-8へ
+export LANG=ja_JP.UTF-8
+
+#sakuraでzshにすると定期的に
+#zsh: permission denied: /var/mail/{account}
+#と出力されてしまうので。
+export MAILCHECK=0
