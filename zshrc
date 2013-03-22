@@ -95,6 +95,11 @@ bindkey "^u" backward-delete-char
 export GIT_EDITOR=vim
 
 #--------------------------
+# 環境変数追加
+#--------------------------
+export HOST=$host
+
+#--------------------------
 # 環境別の設定を読み込む
 #--------------------------
 HOST=`hostname|awk 'BEGIN{FS="."}{print $2}'`
