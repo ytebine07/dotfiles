@@ -9,9 +9,4 @@ let g:neocomplcache_max_list = 20
 inoremap <expr><TAB> pumvisible() ? "\<Down>" : "\<TAB>"
 "<S-TAB>が効かないけど一応書いておく。
 "時間があったら調べる。
-inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
-
-
-"スニペットの設定
-"<C-k>で、上に移動とスニペット補完両方やりたい。
-"imap <expr><C-k> neocomplcache#sources#snippets_complete#expandable() ? "\<Plug>(neocomplcache_snippets_expand)" : "\<Up>"
+"inoremap <expr><S-TAB> pumvisible() ? "\<Up>" : "\<S-TAB>"
