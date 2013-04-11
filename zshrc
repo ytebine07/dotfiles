@@ -85,7 +85,7 @@ fi
 # キーバインド変更
 #--------------------------
 bindkey "^h" backward-char
-bindkey "^l" forward-char
+#bindkey "^l" forward-char
 bindkey "^u" backward-delete-char
 
 #--------------------------
