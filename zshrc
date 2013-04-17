@@ -10,6 +10,16 @@ setopt auto_cd              #ディレクトリ名だけで移動
 setopt nolistbeep           #ビープ音をならさない
 setopt share_history        #複数端末での履歴共有
 setopt extended_history     #履歴に日付も入れる
+export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" #C-wで単語境界にならない文字指定
+
+#--------------------------
+# ディレクトリスタック設定
+#--------------------------
+DIRSTACKSIZE=100
+setopt AUTO_PUSHD
+zstyle ':completion:*' menu select
+#autoload -Uz compinit && compinit
+#zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 #--------------------------
 # 自作関数ファイル読み込み
@@ -74,6 +84,8 @@ alias g='git'
 alias mkdirp='mkch'
 alias z='zsh'
 alias hist='history 1'
+alias grep='grep --color'
+
 
 CTAGSPATH="$HOME/dotfiles/bins/ctags-5.8j2/bin/ctags"
 ls $CTAGSPATH > /dev/null 2>&1
