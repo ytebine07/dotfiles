@@ -84,7 +84,8 @@ alias tm='tmux'
 alias g='git'
 alias mkdirp='mkch'
 alias z='zsh'
-alias hist='history 1'
+alias hist='history -i 1'
+alias history='history -i'
 alias grep='grep --color'
 
 
