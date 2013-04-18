@@ -3,5 +3,35 @@
 "--------------------------------------------
 set t_Co=256                "256色設定
 ":colorscheme darkblue
-:colorscheme molokai
+":colorscheme molokai
 ":colorscheme zenburn
+
+"--------------------------------------------
+" カラースキーマを再読み込みするための自作関数
+"--------------------------------------------
+"{{{カラースキーマを読み込ませる関数(本体)
+if ! exists("g:MyColorschemeFlg")
+   function! ReadCS(arg)
+      let g:MyColorschemeFlg=1
+        execute "colorscheme" a:arg
+        execute "source ~/.vimrc"
+   endfunction
+endif
+"}}}
+"{{{ ↑の関数用の補完関数。
+function! CompletionColorSchemes(ArgLead, CmdLine, CusorPos)
+    let l:filter_cmd = printf('v:val =~ "^%s"', a:ArgLead)
+    return filter(['molokai','zenburn','xoria256','darkblue'],l:filter_cmd)
+endfunction
+"}}}
+"{{{ 作成した関数を、コマンドにマッピング。
+command! -complete=customlist,CompletionColorSchemes -nargs=1 Colorscheme call ReadCS(<f-args>)
+"}}}
+
+"--------------------------------------------
+" 色の独自設定
+"--------------------------------------------
+" visualモードで選択された箇所の色付け
+hi clear Visual
+hi Visual ctermbg=81 guibg=#005f00 term=reverse
+hi Visual ctermbg=29 guibg=#005f00 term=reverse

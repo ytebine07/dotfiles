@@ -14,11 +14,13 @@ endif
 "強力補完機能
 NeoBundle 'Shougo/neocomplcache'
 "snipeet
-NeoBundle 'Shougo/neosnippet'
+"NeoBundle 'Shougo/neosnippet'
 "unite
 NeoBundle 'Shougo/unite.vim'
+
+NeoBundle 'ujihisa/unite-colorscheme'
 "srround
-NeoBundle 'taichouchou2/surround.vim'
+NeoBundle 'tpope/vim-surround.git'
 "コードを書いたらすぐ実行
 NeoBundle 'thinca/vim-quickrun.git'
 "コード整形用
@@ -31,12 +33,15 @@ NeoBundle 'vim-scripts/minibufexpl.vim.git'
 NeoBundle 'mattn/zencoding-vim.git'
 "statuslineを強化
 NeoBundle  'Lokaltog/vim-powerline.git'
-"ctags解析補助
-NeoBundle 'vim-scripts/trinity.vim.git'
 "カーソル移動をもっと便利に
 NeoBundle 'Lokaltog/vim-easymotion'
+"ctags解析補助
+NeoBundle 'vim-scripts/Trinity.git'
+NeoBundle 'vim-scripts/ctags.vim.git'
+NeoBundle 'vim-scripts/taglist.vim.git'
+NeoBundle 'wesleyche/SrcExpl.git'
 
-'
+
 
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
@@ -44,4 +49,5 @@ NeoBundle 'Lokaltog/vim-easymotion'
 "カラースキーマ
 NeoBundle 'tomasr/molokai.git'
 NeoBundle 'jnurmine/Zenburn.git'
+NeoBundle 'vim-scripts/xoria256.vim.git'
 filetype plugin indent on

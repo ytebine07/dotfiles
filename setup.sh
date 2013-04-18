@@ -27,4 +27,10 @@ git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/plugins/neobundle
 # 3.git-completion.bashを入れる
 ##############################################
 curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
+curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh > git-completion.zsh
 curl -k https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > git-prompt.sh
+
+##############################################
+# 4.binディレクトリを作る
+##############################################
+mkdir ./bins/
