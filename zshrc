@@ -18,6 +18,7 @@ export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" #C-wで単語境界にならない文�
 DIRSTACKSIZE=100
 setopt AUTO_PUSHD
 zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors di=34 fi=0
 #autoload -Uz compinit && compinit
 #zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
