@@ -1,0 +1,17 @@
+#/bin/zsh
+#--------------------------
+#   sakuraサーバー用セッティング
+#--------------------------
+#プロンプトを変更する
+PROMPT="${GREEN}%S<%U%m%u@%n>%s ${END_COLOR}${PINK}[%~]${END_COLOR}
+"
+PROMPT=$PROMPT"[%*]$ "
+RPROMPT=${BRANCH}
+
+#文字コードをUTF-8へ
+export LANG=ja_JP.UTF-8
+
+#sakuraでzshにすると定期的に
+#zsh: permission denied: /var/mail/{account}
+#と出力されてしまうので。
+export MAILCHECK=0

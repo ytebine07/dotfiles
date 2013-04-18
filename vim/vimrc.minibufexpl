@@ -1,0 +1,14 @@
+"--------------------------------------------
+" minibufexplの設定
+"--------------------------------------------
+"タブ間の移動キーマップ
+nmap <silent> <C-p> :MBEbn<CR>
+nmap <silent> <C-n> :MBEbp<CR>
+
+
+" 色の設定
+hi MBENormal               guibg=white  ctermbg=white   guifg=black   ctermfg=black
+hi MBEVisibleNormal        guibg=black  ctermbg=black   guifg=white   ctermfg=white
+hi MBEVisibleChangedActive guibg=red    ctermbg=red     guifg=#F1266F
+hi MBEVisibleChanged       guibg=green  ctermbg=green   guifg=#F1266F
+hi MBEChanged              guibg=green  ctermbg=green   guifg=yellow ctermfg=yellow
