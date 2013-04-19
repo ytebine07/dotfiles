@@ -21,6 +21,23 @@ alias vi='vim'
 alias sr='screen'
 alias z='zsh'
 
+#ls系
+case "${OSTYPE}" in
+darwin*)
+    alias ls="ls -G"
+    alias la="ls -laG"
+    alias ll="ls -lG"
+    alias ltr="ls -ltrG"
+;;
+linux*)
+    alias ls='ls --color'
+    alias la='ls -la --color'
+    alias ll='ls -l --color'
+    alias ltr='ls -ltr --color'
+    alias grep='grep --color'
+;;
+esac
+
 #bind
 #http://kazmax.zpp.jp/cmd/b/bash.1.html
 bind '"\C-h": backward-char'

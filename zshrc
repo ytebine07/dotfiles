@@ -73,11 +73,6 @@ alias ls='ls -GF'
 #--------------------------
 # command
 #--------------------------
-alias ll='ls -l'
-alias la='ls -la'
-alias ltr='ls -ltr'
-alias ltrtail='ls -ltr|tail'
-alias ltail='ls -ltr|tail'
 alias vi='vim'
 alias sr='screen'
 alias tm='tmux'
@@ -86,7 +81,24 @@ alias mkdirp='mkch'
 alias z='zsh'
 alias hist='history -i 1'
 alias history='history -i'
-alias grep='grep --color'
+
+#ls系
+case "${OSTYPE}" in
+darwin*)
+    alias ls="ls -G"
+    alias la="ls -laG"
+    alias ll="ls -lG"
+    alias ltr="ls -ltrG"
+;;
+linux*)
+    alias ls='ls --color'
+    alias la='ls -la --color'
+    alias ll='ls -l --color'
+    alias ltr='ls -ltr --color'
+    alias grep='grep --color'
+;;
+esac
+
 
 
 CTAGSPATH="$HOME/dotfiles/bins/ctags-5.8j2/bin/ctags"
