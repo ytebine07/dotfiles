@@ -38,14 +38,5 @@ linux*)
 ;;
 esac
 
-#bind
-#http://kazmax.zpp.jp/cmd/b/bash.1.html
-bind '"\C-h": backward-char'
-bind '"\C-l": forward-char'
-bind '"\C-k": previous-history'
-bind '"\C-j": next-history'
-bind '"\C-u": backward-delete-char'
-
-
 #set env for git
 export GIT_EDITOR=vim

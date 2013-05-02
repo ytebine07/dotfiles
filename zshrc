@@ -108,13 +108,6 @@ if [ $? = 0 ]; then
 fi
 
 #--------------------------
-# キーバインド変更
-#--------------------------
-bindkey "^h" backward-char
-#bindkey "^l" forward-char
-bindkey "^u" backward-delete-char
-
-#--------------------------
 # setting for git
 #--------------------------
 export GIT_EDITOR=vim
