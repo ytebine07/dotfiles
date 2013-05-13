@@ -19,8 +19,6 @@ DIRSTACKSIZE=100
 setopt AUTO_PUSHD
 zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors di=34 fi=0
-#autoload -Uz compinit && compinit
-#zstyle ':completion:*:cd:*' ignore-parents parent pwd
 
 #--------------------------
 # 自作関数ファイル読み込み
@@ -76,6 +74,7 @@ alias ls='ls -GF'
 alias vi='vim'
 alias sr='screen'
 alias tm='tmux'
+alias tma='tmux a'
 alias g='git'
 alias mkdirp='mkch'
 alias z='zsh'
