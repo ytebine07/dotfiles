@@ -1,3 +1,6 @@
+#env
+export TODAY=`date +%Y%m%d`
+
 #prompt setting
 PS1='\[\ek\e\\\][\u@\h \W]\$ '
 
@@ -20,6 +23,7 @@ alias ltrtail='ls -ltr|tail'
 alias vi='vim'
 alias sr='screen'
 alias z='zsh'
+alias mkd='mkdir $TODAY'
 
 #ls系
 case "${OSTYPE}" in

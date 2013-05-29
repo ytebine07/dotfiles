@@ -11,6 +11,7 @@ setopt nolistbeep           #ビープ音をならさない
 setopt share_history        #複数端末での履歴共有
 setopt extended_history     #履歴に日付も入れる
 export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" #C-wで単語境界にならない文字指定
+export TODAY=`date +%Y%m%d`
 
 #--------------------------
 # ディレクトリスタック設定
@@ -80,6 +81,7 @@ alias mkdirp='mkch'
 alias z='zsh'
 alias hist='history -i 1'
 alias history='history -i'
+alias mkd='mkdir $TODAY'
 
 #ls系
 case "${OSTYPE}" in
