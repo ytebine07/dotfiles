@@ -24,6 +24,7 @@ alias vi='vim'
 alias sr='screen'
 alias z='zsh'
 alias mkd='mkdir $TODAY'
+alias cdd='cd $TODAY'
 
 #ls系
 case "${OSTYPE}" in

@@ -82,6 +82,7 @@ alias z='zsh'
 alias hist='history -i 1'
 alias history='history -i'
 alias mkd='mkdir $TODAY'
+alias cdd='cd $TODAY'
 
 #ls系
 case "${OSTYPE}" in
