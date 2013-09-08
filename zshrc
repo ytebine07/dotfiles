@@ -99,6 +99,12 @@ linux*)
     alias ltr='ls -ltr --color'
     alias grep='grep --color'
 ;;
+freebsd*)
+    alias ls='ls'
+    alias la='ls -la'
+    alias ll='ls -l'
+    alias ltr='ls -ltr'
+;;
 esac
 
 
