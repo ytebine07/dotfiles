@@ -13,7 +13,6 @@ source  ~/dotfiles/vim/vimrc.neobundle
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.base
 
-"--------------------------------------------
 " 色やカラースキーマの設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.color
