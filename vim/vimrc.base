@@ -26,6 +26,7 @@ set tags=tags;              "tagsファイルを再起的に探してくれる
 set hidden                  "保存しなくても違うバッファに飛ぶ
 
 "自動インデントをいい感じに
+set autoindent
 set indentexpr=""
 set formatoptions=lqrowcb
 set indentkeys=0{,0},0),:,!^F,o,O,e,*<Return>,=?>,=<?,=*/
