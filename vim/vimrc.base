@@ -23,6 +23,7 @@ set tw=0                    "行が長くなっても、勝手に折り返さな
 set visualbell              "ビープ音ならさない(けど画面フラッシュはする)
 set vb t_vb=                "画面フラッシュをやめる
 set tags=tags;              "tagsファイルを再起的に探してくれる
+set hidden                  "保存しなくても違うバッファに飛ぶ
 
 "自動インデントをいい感じに
 set indentexpr=""
