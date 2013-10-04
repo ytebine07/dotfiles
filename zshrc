@@ -14,6 +14,14 @@ export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" #C-wで単語境界にならない文�
 export TODAY=`date +%Y%m%d`
 
 #--------------------------
+# 過去履歴から便利に探る
+#--------------------------
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+#--------------------------
 # ディレクトリスタック設定
 #--------------------------
 DIRSTACKSIZE=100
@@ -106,6 +114,9 @@ freebsd*)
     alias ltr="ls -ltrG"
 ;;
 esac
+
+
+
 
 
 
