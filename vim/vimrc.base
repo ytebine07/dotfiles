@@ -41,4 +41,11 @@ set clipboard=unnamed       "ヤンクした文字列をクリップボードへ
 
 "スペースや改行など見えない文字を見えるようにする。
 set list
-set listchars=tab:>-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
+"set listchars=tab:>-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
+set listchars=tab:>-,trail:-,extends:»,precedes:«,nbsp:%
+
+"----------------------------
+"テスト導入ゾーン
+"----------------------------
+"チルダのついたバックアップファイルを作成しない
+set nobackup

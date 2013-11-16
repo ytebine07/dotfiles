@@ -5,6 +5,7 @@
 # 1.各種dotfileへのsymlinkを張る
 ##############################################
 DOT_FILES=( .vimrc
+            .gvimrc
             .bashrc
             .zshrc
             .screenrc
