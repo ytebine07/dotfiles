@@ -36,6 +36,9 @@ set expandtab               "設定するとインデントがスペースにな
 set softtabstop=4           "タブを入力したときにずれる幅(スペース換算)
 set tabstop=4               "1タブの表示幅
 
+"MacVim用
+set clipboard=unnamed       "ヤンクした文字列をクリップボードへ
+
 "スペースや改行など見えない文字を見えるようにする。
 set list
 set listchars=tab:>-,trail:-,eol:$,extends:»,precedes:«,nbsp:%
