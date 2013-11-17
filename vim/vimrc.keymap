@@ -24,7 +24,12 @@ inoremap <C-k>  <UP>
 inoremap <C-l>  <RIGHT>
 inoremap <C-j>  <DOWN>
 inoremap ;;     <END>
+inoremap <C-a>  <HOME>
+inoremap <C-e>  <END>
 "}}}
+
+nnoremap <C-a>  <HOME>
+nnoremap <C-e>  <END>
 
 "分割されたとき、大きさを簡単に変える {{{
 noremap     8       <C-W>+
@@ -56,3 +61,6 @@ inoremap <silent> <C-[> <Esc>
 
 " 「日本語入力固定モード」切り替えキー
 inoremap <silent> <C-j> <C-^>
+
+"ヴィジュアルモード時<Enter>でコピー完了
+vmap <CR> y<Esc>
