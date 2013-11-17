@@ -15,23 +15,32 @@ for FILE in ${DOT_FILES[@]}
 do
     #リンク先のファイル名から.を抜く
     TO_FILE=${FILE#\.};
-    ln -s $HOME/dotfiles/$TO_FILE $HOME/$FILE
+    if [ -a ${FILE}  ]; then
+        ln -s $HOME/dotfiles/$TO_FILE $HOME/$FILE
+    fi
 done
 
 
 ##############################################
 # 2.neobundle.vimを入れる
 ##############################################
-git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/plugins/neobundle.vim
+if [ ! -d ~/dotfiles/vim/plugins/neobundle.vim ]; then
+    git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/plugins/neobundle.vim
+fi
 
 ##############################################
 # 3.git-completion.bashを入れる
 ##############################################
-curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
-curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh > git-completion.zsh
-curl -k https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > git-prompt.sh
+#curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
+#curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh > git-completion.zsh
+#curl -k https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > git-prompt.sh
+curl -sSO https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
+curl -sSO https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
+curl -sSO https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
 
 ##############################################
 # 4.binディレクトリを作る
 ##############################################
-mkdir ./bins/
+if [ ! -d ./bins/ ]; then
+    mkdir ./bins/
+fi
