@@ -5,7 +5,7 @@ source  ~/dotfiles/vim/vimrc.neobundle
 
 colorscheme xoria256
 set nobackup            "チルダ付ファイルを作成しない
-
+set backupdir=/tmp/
 
 "MacVimでsjisを文字化けさせないようにする設定
 set enc=utf-8
