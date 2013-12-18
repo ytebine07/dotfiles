@@ -23,9 +23,9 @@ NeoBundle 'Shougo/neocomplcache'
 "NeoBundle 'Shougo/neosnippet'
 "unite
 NeoBundle 'Shougo/unite.vim'
-
+"綺麗なカラースキーマ
 NeoBundle 'ujihisa/unite-colorscheme'
-"srround
+"ダブルクォーテーションなどの囲む系を変えやすくする
 NeoBundle 'tpope/vim-surround.git'
 "コードを書いたらすぐ実行
 NeoBundle 'thinca/vim-quickrun.git'
