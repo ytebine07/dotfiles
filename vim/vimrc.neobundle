@@ -20,7 +20,7 @@ endif
 "強力補完機能
 NeoBundle 'Shougo/neocomplcache'
 "snipeet
-"NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet'
 "unite
 NeoBundle 'Shougo/unite.vim'
 "綺麗なカラースキーマ

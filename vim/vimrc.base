@@ -25,6 +25,8 @@ set vb t_vb=                "画面フラッシュをやめる
 set tags=tags;              "tagsファイルを再起的に探してくれる
 set hidden                  "保存しなくても違うバッファに飛ぶ
 set nobackup                "チルダのついたバックアップファイルを作成しない
+filetype plugin on          "設定しないとunite-colorschemeがうるさい
+
 
 "自動インデントをいい感じに
 set autoindent
@@ -48,6 +50,4 @@ set listchars=tab:>-,trail:-,extends:»,precedes:«,nbsp:%
 "----------------------------
 "テスト導入ゾーン
 "----------------------------
-"設定しないとunite-colorschemeがうるさい
-filetype plugin on
 
