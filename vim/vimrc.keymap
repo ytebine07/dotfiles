@@ -23,7 +23,6 @@ inoremap <C-h>  <LEFT>
 inoremap <C-k>  <UP>
 inoremap <C-l>  <RIGHT>
 inoremap <C-j>  <DOWN>
-inoremap ;;     <END>
 inoremap <C-a>  <HOME>
 inoremap <C-e>  <END>
 "}}}
@@ -64,3 +63,4 @@ inoremap <silent> <C-j> <C-^>
 
 "ヴィジュアルモード時<Enter>でコピー完了
 vmap <CR> y<Esc>
+

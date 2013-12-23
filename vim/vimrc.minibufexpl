@@ -4,6 +4,8 @@
 "タブ間の移動キーマップ
 nmap <silent> <C-p> :MBEbn<CR>
 nmap <silent> <C-n> :MBEbp<CR>
+"nmap <silent> <C-Tab> :MBEbn<CR>
+"nmap <silent> <C-S-Tab> :MBEbp<CR>
 
 
 " 色の設定
