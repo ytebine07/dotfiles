@@ -12,6 +12,7 @@ setopt share_history        #複数端末での履歴共有
 setopt extended_history     #履歴に日付も入れる
 export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" #C-wで単語境界にならない文字指定
 export TODAY=`date +%Y%m%d`
+stty -ixon
 
 #--------------------------
 # 過去履歴から便利に探る
