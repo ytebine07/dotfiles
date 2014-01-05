@@ -113,6 +113,7 @@ freebsd*)
     alias la="ls -laG"
     alias ll="ls -lG"
     alias ltr="ls -ltrG"
+    export TERM=xterm
 ;;
 esac
 
