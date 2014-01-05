@@ -23,8 +23,16 @@ inoremap <C-h>  <LEFT>
 inoremap <C-k>  <UP>
 inoremap <C-l>  <RIGHT>
 inoremap <C-j>  <DOWN>
+"emacsぽく
 inoremap <C-a>  <HOME>
 inoremap <C-e>  <END>
+inoremap <C-b>  <LEFT>
+inoremap <C-f>  <RIGHT>
+inoremap <C-p>  <UP>
+inoremap <C-n>  <DOWN>
+imap <C-p>  <UP>
+imap <C-n>  <DOWN>
+"}}}
 "}}}
 
 nnoremap <C-a>  <HOME>
