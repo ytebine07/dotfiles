@@ -1,4 +1,17 @@
-#env
+#!/bin/bash
+#--------------------------
+# サーバー情報があれば表示する
+#--------------------------
+if [ -f ~/server.txt ]
+then
+    si () {
+        #command cd $1
+        #ls -l
+        cat ~/server.txt
+    }
+fi
+
+
 export TODAY=`date +%Y%m%d`
 
 #prompt setting
