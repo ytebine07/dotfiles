@@ -89,7 +89,7 @@ alias ls='ls -GF'
 #--------------------------
 # command
 #--------------------------
-alias vi='vim'
+#alias vi='vim'
 alias sr='screen'
 alias tm='tmux'
 alias tma='tmux a'
