@@ -31,12 +31,9 @@ fi
 ##############################################
 # 3.git-completion.bashを入れる
 ##############################################
-#curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
-#curl -k https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh > git-completion.zsh
-#curl -k https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > git-prompt.sh
-curl -sSO https://raw.github.com/git/git/master/contrib/completion/git-completion.bash
-curl -sSO https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh
-curl -sSO https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh
+curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
+curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh > git-completion.zsh
+curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > git-prompt.sh
 
 ##############################################
 # 4.binディレクトリを作る

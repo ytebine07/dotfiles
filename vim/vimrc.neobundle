@@ -2,20 +2,17 @@
 "   neobundleの設定ファイル
 "--------------------------------------------
 set nocompatible
-
-"デフォルトプロトコルをgitに変更
-let g:neobundle#types#git#default_protocol = 'git'
-
 filetype off
-
-
 
 if has('vim_starting')
     "neobundleの場所
     set runtimepath+=~/dotfiles/vim/plugins/neobundle.vim
     "プラグインの展開場所 
-    call neobundle#rc(expand('~/dotfiles/vim/plugins'))
+    call neobundle#begin(expand('~/dotfiles/vim/plugins'))
 endif
+
+
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 "強力補完機能
 NeoBundle 'Shougo/neocomplcache'
@@ -47,8 +44,6 @@ NeoBundle 'vim-scripts/ctags.vim.git'
 NeoBundle 'vim-scripts/taglist.vim.git'
 NeoBundle 'wesleyche/SrcExpl.git'
 
-
-
 "Vimの中でShellを起動する
 "NeoBundle 'Shougo/vimshell'
 
@@ -56,3 +51,5 @@ NeoBundle 'wesleyche/SrcExpl.git'
 NeoBundle 'tomasr/molokai.git'
 NeoBundle 'jnurmine/Zenburn.git'
 NeoBundle 'vim-scripts/xoria256.vim.git'
+
+call neobundle#end()
