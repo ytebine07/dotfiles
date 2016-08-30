@@ -92,7 +92,7 @@ alias ls='ls -GF'
 #--------------------------
 #alias vi='vim'
 alias sr='screen'
-alias tm='tmux'
+alias tm='TERM=screen-256color-bce tmux'
 alias tma='tmux a'
 alias g='git'
 alias mkdirp='mkch'
