@@ -15,11 +15,11 @@ for FILE in ${DOT_FILES[@]}
 do
     #リンク先のファイル名から.を抜く
     TO_FILE=${FILE#\.};
-    if [ -a ${FILE}  ]; then
+    if [ ! -f $HOME/$FILE ]; then
+        echo "create symlink -> $FILE"
         ln -s $HOME/dotfiles/$TO_FILE $HOME/$FILE
     fi
 done
-
 
 ##############################################
 # 2.neobundle.vimを入れる
