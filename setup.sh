@@ -41,3 +41,11 @@ curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/git-promp
 if [ ! -d ./bins/ ]; then
     mkdir ./bins/
 fi
+
+##############################################
+# 5.gitのショートカット
+##############################################
+git config --global alias.br "branch"
+git config --global alias.co "checkout"
+git config --global alias.st "status"
+git config --global color.ui auto
