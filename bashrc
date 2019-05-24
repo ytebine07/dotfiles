@@ -22,11 +22,13 @@ function promps {
     GREEN="\e[092m"
     YELLOW="\e[093m"
     PINK="\e[095m"
+    SH="\[\e[1;37;42m\]"
     END_COLOR="\e[0m"
     BRANCH='$(__git_ps1 "(%s)")'
     GIT_PS1_SHOWDIRTYSTATE=1
     PS1="${debian_chroot:+($debian_chroot)}"
-    PS1=$PS1"${GREEN}<\u@\h>\]${END_COLOR} "
+    PS1=$PS1"${GREEN}<\u@\h>\]${END_COLOR}"
+    PS1=$PS1"${SH}b${END_COLOR}"
     PS1=$PS1"${PINK}[\w]${END_COLOR}"
     PS1=$PS1"\n"
     PS1=$PS1"[\t]"
