@@ -28,7 +28,7 @@ function promps {
     GIT_PS1_SHOWDIRTYSTATE=1
     PS1="${debian_chroot:+($debian_chroot)}"
     PS1=$PS1"${GREEN}<\u@\h>\]${END_COLOR}"
-    PS1=$PS1"${SH}b${END_COLOR}"
+    PS1=$PS1"${SH}bash${END_COLOR}"
     PS1=$PS1"${PINK}[\w]${END_COLOR}"
     PS1=$PS1"\n"
     PS1=$PS1"[\t]"
