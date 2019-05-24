@@ -47,6 +47,7 @@ alias g='git'
 alias mkd='mkdir $TODAY'
 alias cdd='cd $TODAY'
 alias mkdr='mkdir $TODAY && cd $TODAY'
+alias ..='cd ../'
 
 #ls系
 case "${OSTYPE}" in
