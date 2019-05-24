@@ -4,12 +4,11 @@
 ##############################################
 # 1.各種dotfileへのsymlinkを張る
 ##############################################
-DOT_FILES=( .vimrc
-            .gvimrc
+DOT_FILES=( 
+            .vimrc
             .bashrc
             .zshrc
-            .screenrc
-            .tmux.conf)
+          )
 
 for FILE in ${DOT_FILES[@]}
 do
