@@ -16,36 +16,18 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 
 "強力補完機能
 NeoBundle 'Shougo/neocomplcache'
-"snipeet
-NeoBundle 'Shougo/neosnippet'
-"unite
-NeoBundle 'Shougo/unite.vim'
 "綺麗なカラースキーマ
 NeoBundle 'ujihisa/unite-colorscheme'
 "ダブルクォーテーションなどの囲む系を変えやすくする
 NeoBundle 'tpope/vim-surround.git'
-"コードを書いたらすぐ実行
-NeoBundle 'thinca/vim-quickrun.git'
-"コード整形用
-NeoBundle 'h1mesuke/vim-alignta.git'
 "コメントアウトを簡単に
 NeoBundle 'scrooloose/nerdcommenter.git'
 "Bufferをタブみたいに表示する
 NeoBundle 'vim-scripts/minibufexpl.vim.git'
-"htmlを高速で書く
-NeoBundle 'mattn/zencoding-vim.git'
 "statuslineを強化
 NeoBundle  'Lokaltog/vim-powerline.git'
 "カーソル移動をもっと便利に
 NeoBundle 'Lokaltog/vim-easymotion'
-"ctags解析補助
-NeoBundle 'vim-scripts/Trinity.git'
-NeoBundle 'vim-scripts/ctags.vim.git'
-NeoBundle 'vim-scripts/taglist.vim.git'
-NeoBundle 'wesleyche/SrcExpl.git'
-
-"Vimの中でShellを起動する
-"NeoBundle 'Shougo/vimshell'
 
 "カラースキーマ
 NeoBundle 'tomasr/molokai.git'

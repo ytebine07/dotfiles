@@ -13,6 +13,7 @@ source  ~/dotfiles/vim/vimrc.neobundle
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.base
 
+"--------------------------------------------
 " 色やカラースキーマの設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.color
@@ -33,11 +34,6 @@ source  ~/dotfiles/vim/vimrc.statusline
 source  ~/dotfiles/vim/vimrc.keymap
 
 "--------------------------------------------
-"   [plugin]Unite.vim系の設定 
-"--------------------------------------------
-source  ~/dotfiles/vim/vimrc.unite
-
-"--------------------------------------------
 " [plugin]neocomplchacheの設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.neocomplcache
@@ -46,8 +42,3 @@ source  ~/dotfiles/vim/vimrc.neocomplcache
 " [plugin]minibufexplの設定
 "--------------------------------------------
 source  ~/dotfiles/vim/vimrc.minibufexpl
-
-"--------------------------------------------
-" [plugin]trinity系プラグイン達の設定
-"--------------------------------------------
-source ~/dotfiles/vim/vimrc.trinity

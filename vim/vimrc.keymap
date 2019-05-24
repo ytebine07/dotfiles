@@ -33,7 +33,6 @@ inoremap <C-n>  <DOWN>
 imap <C-p>  <UP>
 imap <C-n>  <DOWN>
 "}}}
-"}}}
 
 nnoremap <C-a>  <HOME>
 nnoremap <C-e>  <END>
