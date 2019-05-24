@@ -11,14 +11,21 @@ DOT_FILES=(
 
 for FILE in ${DOT_FILES[@]}
 do
-    #リンク先のファイル名から.を抜く
-    TO_FILE=${FILE#\.};
+    TO_FILE=${FILE#\.}; #リンク先のファイル名から.を抜く
     if [ -f $HOME/$FILE ]; then
-        echo "[$FILE] already exists."
-        echo "   echo \"source \$HOME/dotfiles/$TO_FILE\" >> \$HOME/$FILE  "
-
+        if [ -L $HOME/$FILE ]; then
+            echo "[$FILE]'s symlink already exists."
+        else
+            cat $HOME/$FILE | grep "source \$HOME/dotfiles/$TO_FILE" > /dev/null 2>&1
+            if [ $? -eq 0  ]; then
+                echo "[$FILE] already added source setting."
+            else
+                echo "[$FILE] add source to my setting."
+                echo "source \$HOME/dotfiles/$TO_FILE" >> $HOME/$FILE
+            fi
+       fi
     else
-        echo "create symlink -> $FILE"
+        echo "[$FILE] create symlink."
         ln -s $HOME/dotfiles/$TO_FILE $HOME/$FILE
     fi
 done
