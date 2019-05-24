@@ -24,7 +24,7 @@ function promps {
     PINK="\e[095m"
     END_COLOR="\e[0m"
     BRANCH='$(__git_ps1 "(%s)")'
-
+    GIT_PS1_SHOWDIRTYSTATE=1
     PS1="${debian_chroot:+($debian_chroot)}"
     PS1=$PS1"${GREEN}<\u@\h>\]${END_COLOR} "
     PS1=$PS1"${PINK}[\w]${END_COLOR}"
