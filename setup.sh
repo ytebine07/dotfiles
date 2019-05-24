@@ -8,7 +8,7 @@ DOT_FILES=(
             .vimrc
             .bashrc
             .zshrc
-          )
+)
 
 for FILE in ${DOT_FILES[@]}
 do
@@ -29,21 +29,27 @@ echo "2.neobundle.vimを入れる"
 echo "##############################################"
 if [ ! -d ~/dotfiles/vim/plugins/neobundle.vim ]; then
     git clone git://github.com/Shougo/neobundle.vim ~/dotfiles/vim/plugins/neobundle.vim
+else
+    echo "[neobundle.vim] already exists."
 fi
 
 echo "##############################################"
-echo "3.git-completion.bashを入れる"
+echo "3.git-completion系を入れる"
 echo "##############################################"
-if [ ! -s git-completion.bash ]; then
-    echo "nai"
-    curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/git-completion.bash > git-completion.bash
-fi
-if [ ! -s git-completion.zsh ]; then
-    curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/git-completion.zsh > git-completion.zsh
-fi
-if [ ! -s git-prompt.sh ]; then
-curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/git-prompt.sh > git-prompt.sh
-fi
+GIT_FILES=(
+    git-completion.bash
+    git-completion.zsh
+    git-prompt.sh
+)
+for GFILE in ${GIT_FILES[@]}
+do
+    if [ ! -s $GFILE ]; then
+        echo Download [$GFILE]
+        curl -s -f -L https://raw.github.com/git/git/master/contrib/completion/$GFILE > $GFILE
+    else
+        echo "[$GFILE] already exists."
+    fi
+done
 
 echo "##############################################"
 echo "4.gitの設定"
