@@ -13,6 +13,8 @@ fi
 
 # cdコマンド無しでcd
 shopt -s autocd
+# sudo でも補完
+complete -cf sudo
 
 #-------------------------
 # prompt setting
