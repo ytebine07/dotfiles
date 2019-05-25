@@ -11,6 +11,9 @@ then
     }
 fi
 
+# cdコマンド無しでcd
+shopt -s autocd
+
 #-------------------------
 # prompt setting
 #-------------------------
