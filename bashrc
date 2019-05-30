@@ -20,18 +20,18 @@ complete -cf sudo
 # prompt setting
 #-------------------------
 # gitのbranchをプロンプトに出したい
+source $HOME/dotfiles/git-prompt.sh
 function promps {
-    S1='\[\ek\e\\\][\u@\h \W]\$ '
 
-    source $HOME/dotfiles/git-prompt.sh
-    GREEN="\e[92m\]"
-    YELLOW="\e[93m\]"
-    PINK="\e[95m\]"
-    SH="\e[30;1m\]"
-    END_COLOR="\e[0m\]"
+    GREEN="\[\e[92m\]"
+    YELLOW="\[\e[93m\]"
+    PINK="\[\e[95m\]"
+    SH="\[\e[30;1m\]"
+    END_COLOR="\[\e[0m\]"
     BRANCH='$(__git_ps1 "(%s)")'
     GIT_PS1_SHOWDIRTYSTATE=1
-    PS1="${debian_chroot:+($debian_chroot)}"
+    unset PS1
+    PS1=""
     PS1=$PS1"${GREEN}<\u@\h>\]${END_COLOR}"
     PS1=$PS1"${PINK}[\w]${END_COLOR}"
     PS1=$PS1"${SH}(bash)${END_COLOR}"
