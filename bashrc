@@ -32,7 +32,7 @@ function promps {
     GIT_PS1_SHOWDIRTYSTATE=1
     unset PS1
     PS1=""
-    PS1=$PS1"${GREEN}<\u@\h>\]${END_COLOR}"
+    PS1=$PS1"${GREEN}<\u@\h>${END_COLOR}"
     PS1=$PS1"${PINK}[\w]${END_COLOR}"
     PS1=$PS1"${SH}(bash)${END_COLOR}"
     PS1=$PS1"\n"
