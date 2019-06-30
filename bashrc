@@ -57,6 +57,7 @@ alias mkd='mkdir $TODAY'
 alias cdd='cd $TODAY'
 alias mkdr='mkdir $TODAY && cd $TODAY'
 alias ..='cd ../'
+alias Grep='grep'
 
 #ls系
 case "${OSTYPE}" in
