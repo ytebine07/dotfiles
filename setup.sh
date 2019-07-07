@@ -72,9 +72,15 @@ if [ $? -ne 0 ]; then
     GITUSEREMAIL=${GITUSEREMAIL:-ytebine07@gmail.com}
     git config --global user.email "$GITUSEREMAIL"
 fi
+git config --local user.name ytebine07
+git config --local user.email ytebine07@gmail.com
+
 git config --global alias.br "branch"
 git config --global alias.co "checkout"
 git config --global alias.st "status"
 git config --global color.ui auto
-echo "[config list]"
+echo "[config global list]"
 git config --global --list
+echo ""
+echo "[config local list]"
+git config --local --list
