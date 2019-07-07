@@ -23,7 +23,8 @@ complete -cf sudo
 source $HOME/dotfiles/git-prompt.sh
 function promps {
 
-    GREEN="\[\e[92m\]"
+    #GREEN="\[\e[92m\]"
+    GREEN="\e[37m\e[42m\]"
     YELLOW="\[\e[93m\]"
     PINK="\[\e[95m\]"
     SH="\[\e[30;1m\]"
