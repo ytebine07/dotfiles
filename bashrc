@@ -59,6 +59,8 @@ alias cdd='cd $TODAY'
 alias mkdr='mkdir $TODAY && cd $TODAY'
 alias ..='cd ../'
 alias Grep='grep'
+alias dc='docker container'
+alias di='docker image'
 
 #ls系
 case "${OSTYPE}" in
