@@ -44,6 +44,14 @@ function promps {
 promps
 
 #-------------------------
+# sshコマンド補完
+# https://qiita.com/albyte/items/aef1e54fccdcc7e32969
+#-------------------------
+function _compreply_ssh(){
+  COMPREPLY=(`cat ~/.ssh/config | grep -i -e '^host' | cut -d " " -f 2 | grep -E "$2"`)
+}
+complete -F _compreply_ssh ssh
+#-------------------------
 # command alias
 #-------------------------
 export TODAY=`date +%Y%m%d`
