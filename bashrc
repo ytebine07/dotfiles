@@ -54,7 +54,6 @@ complete -F _compreply_ssh ssh
 #-------------------------
 # command alias
 #-------------------------
-export TODAY=`date +%Y%m%d`
 alias ll='ls -l'
 alias la='ls -la'
 alias ltr='ls -ltr'
@@ -62,9 +61,9 @@ alias ltrtail='ls -ltr|tail'
 alias g='git'
 alias gl='git log'
 alias gst='git status'
-alias mkd='mkdir $TODAY'
-alias cdd='cd $TODAY'
-alias mkdr='mkdir $TODAY && cd $TODAY'
+alias mkd='export TODAY=`date +%Y%m%d` && mkdir $TODAY'
+alias cdd='export TODAY=`date +%Y%m%d` && cd $TODAY'
+alias mkdr='export TODAY=`date +%Y%m%d` && mkdir $TODAY && cd $TODAY'
 alias ..='cd ../'
 alias Grep='grep'
 alias dc='docker container'
