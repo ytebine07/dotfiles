@@ -142,3 +142,8 @@ HOST=$(hostname | awk 'BEGIN{FS="."}{print $2}')
 if [ "$HOST" = "sakura" ]; then
     source ~/dotfiles/zshrc.sakura
 fi
+
+#--------------------------
+# starship読み込み
+#--------------------------
+eval "$(starship init zsh)"
