@@ -19,7 +19,7 @@ do
     if [ -f $HOME/$FILE ]; then
         if [ -L $HOME/$FILE ]; then
             # シンボリックリンクが存在した場合は何もしない
-            echo "[$FILE]'s symlink already exists."
+            echo "[$FILE] symlink already exists."
         else
             cat $HOME/$FILE | grep "source \$HOME/dotfiles/$TO_FILE" > /dev/null 2>&1
             if [ $? -eq 0  ]; then
@@ -38,6 +38,7 @@ do
     fi
 done
 
+echo ""
 echo "##############################################"
 echo "2.neobundle.vimを入れる"
 echo "##############################################"
@@ -65,6 +66,7 @@ fi
 #    fi
 #done
 
+echo ""
 echo "##############################################"
 echo "4.gitの設定"
 echo "  グローバルのuser.nameを設定"
@@ -100,3 +102,15 @@ git config --global --list
 echo ""
 echo "[config local list]"
 git config --local --list
+
+echo ""
+echo "##############################################"
+echo "4.starshipを入れる"
+echo "##############################################"
+STARSHIP_PATH='/usr/local/bin/starship'
+if [ -f $STARSHIP_PATH ]; then
+    echo "[starship] already installed."
+else
+    echo "Download starship."
+    curl -sS https://starship.rs/install.sh | sh
+fi
