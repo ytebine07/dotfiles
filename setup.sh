@@ -117,7 +117,7 @@ fi
 
 echo ""
 echo "##############################################"
-echo "4-2.starship設定ファイル"
+echo "4-2.starship設定ファイル作成＆シンボリックリンクを貼る"
 echo "##############################################"
 STARSHIP_CONFIG_DIR_PATH="$HOME/.config"
 # ~/.config/フォルダが無ければ作成する
@@ -132,3 +132,15 @@ if [ ! -L $STARSHIP_CONFIG_FILE_PATH ]; then
     echo "[starship]starship.tomlへのシンボリックリンク作成"
     ln -s $HOME/dotfiles/starship.toml $STARSHIP_CONFIG_FILE_PATH
 fi
+
+echo ""
+echo "##############################################"
+echo "5.zshのプラグインを入れる"
+echo "##############################################"
+if [ ! -d ~/dotfiles/zsh/plugins/zsh-autosuggestions ]; then
+    git clone https://github.com/zsh-users/zsh-autosuggestions ~/dotfiles/zsh/plugins/zsh-autosuggestions
+else
+    echo "[zsh-autosuggestions] already exists."
+fi
+
+

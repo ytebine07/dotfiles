@@ -48,13 +48,13 @@ source ~/dotfiles/git-prompt.sh
 #--------------------------
 # gitのブランチ名補完設定
 #--------------------------
-autoload -U compinit; compinit
-zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
-                             /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
-                             /usr/local/git/bin
-autoload bashcompinit
-bashcompinit
-zstyle ':completion:*:*:git:*' script ~/dotfiles/git-completion.zsh
+#autoload -U compinit; compinit
+#zstyle ':completion:*:sudo:*' command-path /usr/local/sbin /usr/local/bin \
+#                             /usr/sbin /usr/bin /sbin /bin /usr/X11R6/bin \
+#                             /usr/local/git/bin
+#autoload bashcompinit
+#bashcompinit
+#zstyle ':completion:*:*:git:*' script ~/dotfiles/git-completion.zsh
 
 #--------------------------
 # プロンプト
@@ -135,6 +135,11 @@ HOST=$(hostname | awk 'BEGIN{FS="."}{print $2}')
 if [ "$HOST" = "sakura" ]; then
     source ~/dotfiles/zshrc.sakura
 fi
+
+#--------------------------
+# plugins読み込み
+#--------------------------
+source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #--------------------------
 # starship読み込み
