@@ -105,7 +105,7 @@ git config --local --list
 
 echo ""
 echo "##############################################"
-echo "4.starshipを入れる"
+echo "4-1.starshipを入れる"
 echo "##############################################"
 STARSHIP_PATH='/usr/local/bin/starship'
 if [ -f $STARSHIP_PATH ]; then
@@ -113,4 +113,22 @@ if [ -f $STARSHIP_PATH ]; then
 else
     echo "Download starship."
     curl -sS https://starship.rs/install.sh | sh
+fi
+
+echo ""
+echo "##############################################"
+echo "4-2.starship設定ファイル"
+echo "##############################################"
+STARSHIP_CONFIG_DIR_PATH="$HOME/.config"
+# ~/.config/フォルダが無ければ作成する
+if [ ! -d $STARSHIP_CONFIG_DIR_PATH ]; then
+    echo "[starship].configディレクトリを作ります"
+    mkdir -p $STARSHIP_CONFIG_DIR_PATH
+fi
+
+# configファイルへシンボリックリンクを貼る
+STARSHIP_CONFIG_FILE_PATH="$HOME/.config/starship.toml"
+if [ ! -L $STARSHIP_CONFIG_FILE_PATH ]; then
+    echo "[starship]starship.tomlへのシンボリックリンク作成"
+    ln -s $HOME/dotfiles/starship.toml $STARSHIP_CONFIG_FILE_PATH
 fi
