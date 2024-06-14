@@ -88,9 +88,8 @@ export LSCOLORS=cxfxcxdxbxegedabagacad
 alias ls='ls -GF'
 
 #--------------------------
-# command
+# alias
 #--------------------------
-#alias vi='vim'
 alias sr='screen'
 alias tm='TERM=screen-256color-bce tmux'
 alias tma='tmux a'
@@ -102,7 +101,7 @@ alias history='history -i'
 alias mkd='mkdir $TODAY'
 alias cdd='cd $TODAY'
 
-#ls系
+#ls系のエイリアス(OSでコマンド違うのでそれぞれ設定)
 case "${OSTYPE}" in
 darwin*)
     alias ls="ls -G"
@@ -126,17 +125,6 @@ freebsd*)
 ;;
 esac
 
-
-
-
-
-
-CTAGSPATH="$HOME/dotfiles/bins/ctags-5.8j2/bin/ctags"
-ls $CTAGSPATH > /dev/null 2>&1
-if [ $? = 0 ]; then
-    alias ctags="$CTAGSPATH"
-fi
-
 #--------------------------
 # setting for git
 #--------------------------
@@ -150,7 +138,7 @@ export HOST=$host
 #--------------------------
 # 環境別の設定を読み込む
 #--------------------------
-HOST=`hostname|awk 'BEGIN{FS="."}{print $2}'`
-if [ $HOST = sakura ]; then
+HOST=$(hostname | awk 'BEGIN{FS="."}{print $2}')
+if [ "$HOST" = "sakura" ]; then
     source ~/dotfiles/zshrc.sakura
 fi
