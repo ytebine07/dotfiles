@@ -40,12 +40,6 @@ zstyle ':completion:*' menu select
 zstyle ':completion:*' list-colors di=34 fi=0
 
 #--------------------------
-# 自作関数ファイル読み込み
-#--------------------------
-source ~/dotfiles/zsh/hs.sh
-source ~/dotfiles/zsh/mkch.sh
-
-#--------------------------
 # gitのbranchをプロンプトに表示する設定
 #--------------------------
 setopt PROMPT_SUBST
@@ -94,10 +88,9 @@ alias sr='screen'
 alias tm='TERM=screen-256color-bce tmux'
 alias tma='tmux a'
 alias g='git'
-alias mkdirp='mkch'
-alias z='zsh'
-alias hist='history -i 1'
-alias history='history -i'
+alias h='history | tail -20'
+alias hist='history | tail -20'
+alias history='history -i 1'
 alias mkd='mkdir $TODAY'
 alias cdd='cd $TODAY'
 
