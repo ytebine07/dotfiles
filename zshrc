@@ -142,6 +142,15 @@ fi
 source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 #--------------------------
+# internal設定読み込み
+#--------------------------
+for config_file in $HOME/dotfiles/zsh/internal/zshrc*; do
+    if [ -f "$config_file" ]; then
+        source $config_file
+    fi
+done
+
+#--------------------------
 # starship読み込み
 #--------------------------
 eval "$(starship init zsh)"

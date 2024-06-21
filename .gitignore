@@ -6,4 +6,5 @@ git-completion.bash
 git-completion.zsh
 git-prompt.sh
 bins/
-zsh/plugins/*
+zsh/plugins
+zsh/internal/zshrc*
