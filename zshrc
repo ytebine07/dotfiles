@@ -145,12 +145,12 @@ source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 # internal設定読み込み
 #--------------------------
 # よみこむzshrcが1つも無いとエラーになるため、1つ以上存在する場合のみ読み込みを実施
-CONFIG_DIR="$HOME/dotfiles/zsh/internal/zshrc*"
-`ls $CONFIG_DIR > /dev/null 2>&1`
-if [ $? -eq 0 ]; then
-    for config_file in $CONFIG_DIR/zshrc*; do
-        if [[ -f "$config_file" && "$config_file" != "$CONFIG_DIR/zshrc*" ]]; then
-            source $config_file
+CONFIG_DIR="$HOME/dotfiles/zsh/internal"
+CNT=`ls $CONFIG_DIR | grep zshrc | wc -l`
+if [ ! $CNT -eq 0 ]; then
+    for CONFIG_FILE in $CONFIG_DIR/zshrc*; do
+        if [[ -f "$CONFIG_FILE" && "$CONFIG_FILE" != "$CONFIG_DIR/zshrc*" ]]; then
+            source $CONFIG_FILE
         fi
     done
 fi
