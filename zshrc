@@ -42,8 +42,8 @@ zstyle ':completion:*' list-colors di=34 fi=0
 #--------------------------
 # gitのbranchをプロンプトに表示する設定
 #--------------------------
-setopt PROMPT_SUBST
-source ~/dotfiles/git-prompt.sh
+#setopt PROMPT_SUBST
+#source ~/dotfiles/git-prompt.sh
 
 #--------------------------
 # gitのブランチ名補完設定
@@ -144,12 +144,16 @@ source ~/dotfiles/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 #--------------------------
 # internal設定読み込み
 #--------------------------
-for config_file in $HOME/dotfiles/zsh/internal/zshrc*; do
-    if [ -f "$config_file" ]; then
-        source $config_file
-    fi
-done
-
+# よみこむzshrcが1つも無いとエラーになるため、1つ以上存在する場合のみ読み込みを実施
+CONFIG_DIR="$HOME/dotfiles/zsh/internal/zshrc*"
+`ls $CONFIG_DIR > /dev/null 2>&1`
+if [ $? -eq 0 ]; then
+    for config_file in $CONFIG_DIR/zshrc*; do
+        if [[ -f "$config_file" && "$config_file" != "$CONFIG_DIR/zshrc*" ]]; then
+            source $config_file
+        fi
+    done
+fi
 #--------------------------
 # starship読み込み
 #--------------------------
