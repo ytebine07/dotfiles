@@ -15,8 +15,11 @@ $ git clone git@github.com:ytebine07/dotfiles.git
 
     ./setup.sh
 
-## vimプラグイン設定
+## Macに必要なディレクトリ作成
 
-vimに入った後
+最近のMacには `/usr/local/bin` が無いようなので作成する
 
-    :NeoBundleInstall
+```
+$ sudo mkdir /usr/local/bin
+```
+
