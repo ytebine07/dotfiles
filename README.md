@@ -12,7 +12,7 @@ $ sh -c "$(curl -fsLS get.chezmoi.io)"
 
 ## 本リポジトリのclone
 ```
-$ chacmoi init git@github.com:ytebine07/dotfiles.git
+$ chezmoi init git@github.com:ytebine07/dotfiles.git
 ```
 
 ## Macに必要なディレクトリ作成
