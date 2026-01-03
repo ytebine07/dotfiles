@@ -1,19 +1,19 @@
 # dotfiles
-ターミナルを使いやすくするdotfilesの設定たち
+ターミナルを使いやすくするdotfilesの設定たち。  
+[chezmoi](https://www.chezmoi.io/)を使って管理しています。
 
 # セットアップ方法
 
-## リポジトリのclone
-ホームディレクトリにcloneする。
-ホームディレクトリ以外にcloneするとうまく動きません。
-
+## chezmoiインストール
 ```
-$ git clone git@github.com:ytebine07/dotfiles.git
+$ sh -c "$(curl -fsLS get.chezmoi.io)"
 ```
+参考 : https://www.chezmoi.io/install/#one-line-package-install
 
-## セットアップシェルの実行
-
-    ./setup.sh
+## 本リポジトリのclone
+```
+$ chacmoi init git@github.com:ytebine07/dotfiles.git
+```
 
 ## Macに必要なディレクトリ作成
 
