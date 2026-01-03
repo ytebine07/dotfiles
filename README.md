@@ -5,10 +5,17 @@
 # セットアップ方法
 
 ## chezmoiインストール
+### Mac
+PATH通すの省略できるので `brew` でインストールするのが良さそう。
+
 ```
-$ sh -c "$(curl -fsLS get.chezmoi.io)"
+$ brew install chezmoi
 ```
-参考 : https://www.chezmoi.io/install/#one-line-package-install
+### Windows
+TBU
+
+### 資料
+- https://www.chezmoi.io/install/#one-line-package-install
 
 ## 本リポジトリのclone
 ```
