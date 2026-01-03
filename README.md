@@ -5,13 +5,13 @@
 # セットアップ方法
 
 ## chezmoiインストール
-### Mac
+### 🍎 Mac
 PATH通すの省略できるので `brew` でインストールするのが良さそう。
 
 ```
 $ brew install chezmoi
 ```
-### Windows
+### 🪟 Windows
 TBU
 
 ### 資料
@@ -20,6 +20,22 @@ TBU
 ## 本リポジトリのclone
 ```
 $ chezmoi init git@github.com:ytebine07/dotfiles.git
+```
+
+## Oh My Zsh インストール
+```
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+```
+
+## powerlevel10k インストール
+```
+$ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+```
+- 資料 : https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#oh-my-zsh
+
+## dotfileの反映
+```
+$ chezmoi apply
 ```
 
 ## Macに必要なディレクトリ作成
