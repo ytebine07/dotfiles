@@ -1,8 +1,0 @@
-[directory]
-truncation_length = 100
-truncate_to_repo = false
-
-#[time]
-#disabled = false
-#time_format = "%Y-%m-%d %H:%M"
-#utc_time_offset = "+9"
