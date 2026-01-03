@@ -82,7 +82,7 @@ export HOST=$host
 # internal設定読み込み
 #--------------------------
 # よみこむzshrcが1つも無いとエラーになるため、1つ以上存在する場合のみ読み込みを実施
-CONFIG_DIR="$HOME/dotfiles/zsh/internal"
+CONFIG_DIR="$HOME/zsh_settings/internal"
 CNT=`ls $CONFIG_DIR | grep zshrc | wc -l`
 if [ ! $CNT -eq 0 ]; then
     for CONFIG_FILE in $CONFIG_DIR/zshrc*; do
