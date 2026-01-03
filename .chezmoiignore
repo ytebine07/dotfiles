@@ -1,0 +1,9 @@
+README.md
+bash_color.sh
+setup.sh
+term_color.sh
+bashrc
+setup_on_devcontainer.sh
+starship.toml
+vimrc
+zshrc

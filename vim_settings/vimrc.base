@@ -2,10 +2,6 @@
 "   基本設定
 "--------------------------------------------
 :syntax     on              "色付け表示 on
-if ! exists("g:MyColorschemeFlg")
-    colorscheme molokai
-endif
-
 :filetype   on              "開いているファイルのタイプ
 set number                  "行数表示
 "set si                      "新しく行を作ったとき、自動インデントを行う

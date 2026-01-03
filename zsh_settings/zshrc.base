@@ -1,0 +1,93 @@
+#/bin/zsh
+#--------------------------
+# 基本設定
+#--------------------------
+HISTFILE=${HOME}/.zsh_history
+HISTSIZE=5000
+SAVEHIST=5000
+setopt hist_ignore_dups     #重複した履歴を保存しない
+setopt auto_cd              #ディレクトリ名だけで移動
+setopt nolistbeep           #ビープ音をならさない
+setopt share_history        #複数端末での履歴共有
+setopt extended_history     #履歴に日付も入れる
+export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" #C-wで単語境界にならない文字指定
+export TODAY=`date +%Y%m%d`
+export PATH=$PATH:/usr/local/mysql/bin:~/.composer/vendor/bin/
+stty -ixon
+
+#--------------------------
+# 過去履歴から便利に探る
+#--------------------------
+autoload history-search-end
+zle -N history-beginning-search-backward-end history-search-end
+zle -N history-beginning-search-forward-end history-search-end
+bindkey "^p" history-beginning-search-backward-end
+bindkey "^n" history-beginning-search-forward-end
+#--------------------------
+# ディレクトリスタック設定
+#--------------------------
+DIRSTACKSIZE=100
+setopt AUTO_PUSHD
+zstyle ':completion:*' menu select
+zstyle ':completion:*' list-colors di=34 fi=0
+
+#--------------------------
+# alias
+#--------------------------
+alias sr='screen'
+alias tm='TERM=screen-256color-bce tmux'
+alias tma='tmux a'
+alias g='git'
+alias h='history | tail -20'
+alias hist='history | tail -20'
+alias history='history -i 1'
+alias mkd='mkdir $TODAY'
+alias cdd='cd $TODAY'
+
+#ls系のエイリアス(OSでコマンド違うのでそれぞれ設定)
+case "${OSTYPE}" in
+darwin*)
+    alias ls="ls -G"
+    alias la="ls -laG"
+    alias ll="ls -lG"
+    alias ltr="ls -ltrG"
+;;
+linux*)
+    alias ls='ls --color'
+    alias la='ls -la --color'
+    alias ll='ls -l --color'
+    alias ltr='ls -ltr --color'
+    alias grep='grep --color'
+;;
+freebsd*)
+    alias ls="ls -G"
+    alias la="ls -laG"
+    alias ll="ls -lG"
+    alias ltr="ls -ltrG"
+    export TERM=xterm
+;;
+esac
+
+#--------------------------
+# setting for git
+#--------------------------
+export GIT_EDITOR=vim
+
+#--------------------------
+# 環境変数追加
+#--------------------------
+export HOST=$host
+
+#--------------------------
+# internal設定読み込み
+#--------------------------
+# よみこむzshrcが1つも無いとエラーになるため、1つ以上存在する場合のみ読み込みを実施
+CONFIG_DIR="$HOME/dotfiles/zsh/internal"
+CNT=`ls $CONFIG_DIR | grep zshrc | wc -l`
+if [ ! $CNT -eq 0 ]; then
+    for CONFIG_FILE in $CONFIG_DIR/zshrc*; do
+        if [[ -f "$CONFIG_FILE" && "$CONFIG_FILE" != "$CONFIG_DIR/zshrc*" ]]; then
+            source $CONFIG_FILE
+        fi
+    done
+fi

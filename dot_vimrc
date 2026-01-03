@@ -1,0 +1,3 @@
+source ~/vim_settings/vimrc.base
+source ~/vim_settings/vimrc.cursorline
+
