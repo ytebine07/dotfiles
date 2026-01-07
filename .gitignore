@@ -1,10 +1,4 @@
 #gitigunoreファイル
-vim/plugins/*
 .DS_Store
 *swp
-git-completion.bash
-git-completion.zsh
-git-prompt.sh
-bins/
-zsh/plugins
-zsh/internal/zshrc*
+zsh_settings/internal/zshrc*
