@@ -48,6 +48,7 @@ alias hist='history | tail -20'
 alias history='history -i 1'
 alias mkd='mkdir $TODAY'
 alias cdd='cd $TODAY'
+alias j='jj'
 
 #ls系のエイリアス(OSでコマンド違うのでそれぞれ設定)
 case "${OSTYPE}" in
