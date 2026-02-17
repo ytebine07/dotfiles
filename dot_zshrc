@@ -116,4 +116,4 @@ source $ZSH/oh-my-zsh.sh
 export PATH="$HOME/.local/bin:$PATH"
 
 
-source ~/zsh_settings/zshrc.base
+source ~/settings_zsh/zshrc.base
