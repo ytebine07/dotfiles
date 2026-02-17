@@ -1,4 +1,3 @@
-#gitigunoreファイル
 .DS_Store
 *swp
-zsh_settings/internal/zshrc*
+settings_zsh/internal/zshrc*
