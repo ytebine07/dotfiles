@@ -534,3 +534,37 @@ show_startup_tips false
 // can be useful for removing wrappers around commands
 // Note: be sure to escape backslashes and similar characters properly
 // post_command_discovery_hook "echo $RESURRECT_COMMAND | sed <your_regex_here>"
+
+// 以下、自身で追加した設定
+// --- キーバインド定義 ---
+// clear-defaults=true により、zellij のデフォルトキーバインドを全削除する
+// → 自分で定義したキーだけが有効になる
+keybinds clear-defaults=true {
+
+    // --- 通常モードでのキー ---
+    normal {
+        // Ctrl+c を「コピー」に割り当て
+        // ※ ただし選択済みのテキストが無いとコピーされない
+        bind "Ctrl c" { Copy; }
+
+        // Ctrl+v を「貼り付け」に割り当て
+        bind "Ctrl v" { Paste; }
+    }
+
+    // --- locked モード以外で常に有効なキー ---
+    shared_except "locked" {
+        // Ctrl+g を押すと強制的に normal モードへ戻る
+        // モード迷子防止用のエスケープキー
+        bind "Ctrl g" { SwitchToMode "normal"; }
+    }
+}
+
+// --- マウス操作を有効化 ---
+// マウスドラッグでテキスト選択できるようにする
+mouse_mode true
+
+// --- 選択したら自動コピー ---
+// マウスでドラッグした瞬間にクリップボードへコピーされる
+// tmuxの copy-on-select と同じ挙動
+copy_on_select true
+
