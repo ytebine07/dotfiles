@@ -4,7 +4,7 @@
 
 keybinds clear-defaults=true {
     locked {
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl l" { SwitchToMode "normal"; }
     }
     pane {
         bind "left" { MoveFocus "left"; }
@@ -148,7 +148,7 @@ keybinds clear-defaults=true {
         bind "Alt [" { PreviousSwapLayout; }
         bind "Alt ]" { NextSwapLayout; }
         bind "Alt f" { ToggleFloatingPanes; }
-        bind "Ctrl g" { SwitchToMode "locked"; }
+        bind "Ctrl l" { SwitchToMode "locked"; }
         bind "Alt h" { MoveFocusOrTab "left"; }
         bind "Alt i" { MoveTab "left"; }
         bind "Alt j" { MoveFocus "down"; }
@@ -553,9 +553,9 @@ keybinds clear-defaults=true {
 
     // --- locked モード以外で常に有効なキー ---
     shared_except "locked" {
-        // Ctrl+g を押すと強制的に normal モードへ戻る
+        // Ctrl+l を押すと強制的に normal モードへ戻る
         // モード迷子防止用のエスケープキー
-        bind "Ctrl g" { SwitchToMode "normal"; }
+        bind "Ctrl l" { SwitchToMode "normal"; }
     }
 }
 
