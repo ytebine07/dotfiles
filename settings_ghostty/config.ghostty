@@ -1,0 +1,23 @@
+## テキスト
+font-size = 14
+
+
+## ウィンドウ設定
+# 透過
+background-opacity = 0.80
+# ブラー
+background-blur-radius = 5
+
+
+# 選択しただけでクリップボードにコピー
+copy-on-select = true
+# クリップボードの読み書きを許可
+clipboard-read = allow
+clipboard-write = allow
+
+window-padding-x = 8
+window-padding-y = 6
+window-padding-balance = true
+
+# スクロールバック
+scrollback-limit = 10000000
