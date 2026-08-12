@@ -1,6 +1,36 @@
+alias sr='screen'
+alias tm='TERM=screen-256color-bce tmux'
+alias tma='tmux a'
 alias g='git'
-alias ls='ls --color'
-alias la='ls -la --color'
-alias ll='ls -l --color'
-alias ltr='ls -ltr --color'
-alias grep='grep --color'
+alias h='history | tail -20'
+alias hist='history | tail -20'
+alias history='history -i 1'
+alias mkd='mkdir $TODAY'
+alias cdd='cd $TODAY'
+alias j='jj'
+alias ze='zellij'
+alias he='herdr'
+
+#ls系のエイリアス(OSでコマンド違うのでそれぞれ設定)
+case "${OSTYPE}" in
+darwin*)
+    alias ls="ls -G"
+    alias la="ls -laG"
+    alias ll="ls -lG"
+    alias ltr="ls -ltrG"
+;;
+linux*)
+    alias ls='ls --color'
+    alias la='ls -la --color'
+    alias ll='ls -l --color'
+    alias ltr='ls -ltr --color'
+    alias grep='grep --color'
+;;
+freebsd*)
+    alias ls="ls -G"
+    alias la="ls -laG"
+    alias ll="ls -lG"
+    alias ltr="ls -ltrG"
+    export TERM=xterm
+;;
+esac
